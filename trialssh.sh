@@ -13,7 +13,7 @@ export WARNING="${red}\e[5m"
 export UNDERLINE="\e[4m"
 
 clear
-domen=`cat /etc/v2ray/domain`
+#domen=`cat /etc/v2ray/domain`
 opensh=`cat /root/log-install.txt | grep -w "OpenSSH" | cut -f2 -d: | awk '{print $1}'`
 db=`cat /root/log-install.txt | grep -w "Dropbear" | cut -f2 -d: | awk '{print $1,$2}'`
 ssl="$(cat ~/log-install.txt | grep -w "Stunnel5" | cut -d: -f2)"
