@@ -55,7 +55,7 @@ echo -e "OpenSSH    : $opensh"
 echo -e "Dropbear   : $db" 
 echo -e "SSH-WS     : 80, 8080, 8880, 2082, 2086, 2052, 2095" 
 echo -e "SSH WS SSL : 443, 8443, 2087, 2096, 2053, 2083 " 
-echo -e "SSL/TLS    :$ssl" 
+echo -e "SSL/TLS    : 444, 445, 447, 777" 
 echo -e "SSH HTTP   : $domen:80@$Login:$Pass"
 echo -e "UDPGW      : 7100-7300" 
 echo -e "${PURPLE}════════════════════════════════════${NC}"
@@ -66,7 +66,8 @@ echo -e " "
 echo -e "${PURPLE}════════════════════════════════════${NC}"
 echo -e "\033[0;32m Sc By Arya Blitar${NC}" 
 
-#else
+else
+
 clear
 echo -e "${PURPLE}═════════════\033[0;33mSSH ACCOUNTS\033[0;34m═══════════${NC}"
 echo -e "${PURPLE}════════════════════════════════════${NC}"
@@ -80,7 +81,7 @@ echo -e "OpenSSH    : $opensh"
 echo -e "Dropbear   : $db" 
 echo -e "SSH-WS     : 80, 8080, 8880, 2082, 2086, 2052, 2095" 
 echo -e "SSH WS SSL : 443, 8443, 2087, 2096, 2053, 2083 " 
-echo -e "SSL/TLS    :$ssl" 
+echo -e "SSL/TLS    : 444, 445, 447, 777" 
 echo -e "SSH HTTP   : $domen:80@$Login:$Pass"
 #echo -e "Link Ovpn  : http://$domen:81"
 echo -e "UDPGW      : 7100-7300" 
