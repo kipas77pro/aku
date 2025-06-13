@@ -66,8 +66,6 @@ echo -e " "
 echo -e "${PURPLE}════════════════════════════════════${NC}"
 echo -e "\033[0;32m Sc By Arya Blitar${NC}" 
 
-else
-
 clear
 echo -e "${PURPLE}═════════════\033[0;33mSSH ACCOUNTS\033[0;34m═══════════${NC}"
 echo -e "${PURPLE}════════════════════════════════════${NC}"
