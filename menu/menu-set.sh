@@ -19,7 +19,7 @@ echo -e " $BICyan│${BIGreen}[${BIWhite}7${BIGreen}]${NC}  • Set Jam Auto Reb
 echo -e " $BICyan│${BIGreen}[${BIWhite}8${BIGreen}]${NC}  • Reboot Vps"
 echo -e " $BICyan│${BIGreen}[${BIWhite}9${BIGreen}]${NC}  • Clear Log"
 echo -e " $BICyan│${BIGreen}[${BIWhite}10${BIGreen}]${NC} • Upgrade Versi New Xray"
-#echo -e " $BICyan│${BIGreen}[${BIWhite}12${BIGreen}]${NC} • Clear Data"
+echo -e " $BICyan│${BIGreen}[${BIWhite}11${BIGreen}]${NC} • Batasi Limit Banwidth Di Vps"
 echo -e " $BICyan│${BIGreen}[${BIWhite}0${BIGreen}]${NC}  • Balik Ke Menu"
 echo -e " $BICyan└───────────────────────────────────────────────┘${NC}"
 echo -e ""
@@ -36,6 +36,7 @@ case $opt in
 8) clear ; reboot ;;
 9) clear ; clearlog ;;
 10) clear ; update-xray ;;
+11) clear ; cek-bw ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-set ;;
 esac
