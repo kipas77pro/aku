@@ -93,4 +93,5 @@ fi
                 service dropbear restart > /dev/null 2>&1;
                 j=0;
 		fi
+read -n 1 -s -r -p "Press any key to back on menu"
 menu-ssh
