@@ -93,3 +93,4 @@ fi
                 service dropbear restart > /dev/null 2>&1;
                 j=0;
 		fi
+menu-ssh
