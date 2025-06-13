@@ -251,7 +251,7 @@ echo -e "┌──────────────────────�
 echo -e " \E[41;1;39m          >>> Install SSH / WS <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1
-wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/tools/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[41;1;39m            >>> Install Xray <<<         \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
@@ -291,8 +291,12 @@ wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/kipas77pro/aku/m
 wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-set.sh"
 wget -q -O /usr/bin/info "https://raw.githubusercontent.com/kipas77pro/aku/main/options/info.sh"
 wget -q -O /usr/bin/jam "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/jam.sh"
+wget -q -O /usr/bin/babi "https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/babi.sh"
+wget -q -O /usr/bin/update-xray "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/update-xray.sh"
 
 chmod +x /usr/bin/jam
+chmod +x /usr/bin/update-xray
+chmod +x /usr/bin/babi
 chmod +x /usr/bin/usernew
 chmod +x /usr/bin/trialssh
 chmod +x /usr/bin/add-ws
