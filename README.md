@@ -9,3 +9,7 @@ wget -O update "raw.githubusercontent.com/kipas77pro/aku/main/options/update.sh"
 ````
 wget -O updatevray "raw.githubusercontent.com/kipas77pro/aku/main/updatevray.sh" && chmod +x updatevray
 ````
+
+````
+wget -O upray "raw.githubusercontent.com/kipas77pro/aku/main/upray.sh" && chmod +x upray
+````
