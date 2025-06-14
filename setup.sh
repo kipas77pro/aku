@@ -169,7 +169,7 @@ echo "$SUB_DOMAIN" > /etc/xray/domain
 echo "$SUB_DOMAIN" > /etc/v2ray/domain
 echo "$SUB_DOMAIN" > /etc/xray/scdomain
 echo "IP=$SUB_DOMAIN" > /var/scrz-prem/ipvps.conf
-rm -rf cf
+
 sleep 1
 yellow "Domain added.."
 sleep 3
@@ -262,12 +262,9 @@ echo -e "└──────────────────────�
 sleep 1
 wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/tools/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m            >>> Install slowdns <<<           \E[0m$NC"
-echo -e "└─────────────────────────────────────────┘"
 sleep 1
 
-echo -e "${GREEN}Download Data${NC}"
+echo -e "${GREEN}Download Data Menu${NC}"
 wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/kipas77pro/aku/main/usernew.sh"
 wget -q -O /usr/bin/trialssh "https://raw.githubusercontent.com/kipas77pro/aku/main/trialssh.sh"
 wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/kipas77pro/aku/main/add-ws.sh"
@@ -406,7 +403,7 @@ echo ""
 echo "===============-[ Script By Arya Blitar ]-==============="
 echo ""
 echo  "   >>> Service & Port"  | tee -a log-install.txt
-echo  "   - OpenSSH                 : 22"  | tee -a log-install.txt
+echo  "   - OpenSSH                 : 22, 2253"  | tee -a log-install.txt
 echo  "   - SSH Websocket           : 80" | tee -a log-install.txt
 echo  "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
 echo  "   - Stunnel5                : 444, 445, 447, 777" | tee -a log-install.txt
@@ -419,7 +416,6 @@ echo  "   - XRAY  Vless TLS         : 443" | tee -a log-install.txt
 echo  "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
 echo  "   - Trojan GRPC             : 443" | tee -a log-install.txt
 echo  "   - Trojan WS               : 443" | tee -a log-install.txt
-#echo  "   - Sodosok WS/GRPC         : 443, 8443, 2087, 2096" | tee -a log-install.txt
 echo  ""  | tee -a log-install.txt
 echo  "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo  "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
