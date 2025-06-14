@@ -5,3 +5,7 @@ apt update && apt upgrade -y && update-grub && sleep 2 && sysctl -w net.ipv6.con
 ````
 wget -O update "raw.githubusercontent.com/kipas77pro/aku/main/options/update.sh" && chmod +x update
 ````
+
+````
+wget -O updatevray "raw.githubusercontent.com/kipas77pro/aku/main/updatevray.sh" && chmod +x updatevray
+````
