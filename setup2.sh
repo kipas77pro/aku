@@ -384,14 +384,6 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 
-# > Buat swap sebesar 1G
-dd if=/dev/zero of=/swapfile bs=1024 count=1048576
-mkswap /swapfile
-chown root:root /swapfile
-chmod 0600 /swapfile >/dev/null 2>&1
-swapon /swapfile >/dev/null 2>&1
-sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
-
 curl -sS ifconfig.me > /etc/myipvps
 
 #install gotop
@@ -444,9 +436,9 @@ echo -e "Wa Me +6281931615811"
 echo  ""
 echo  "" | tee -a log-install.txt
 rm -fr /root/vnstat.sh
-rm -fr /root/ssh-vpn.sh
+rm -fr /root/ssh-vpn2.sh
 rm -fr /root/ins-xray.sh
-rm -fr /root/setup.sh
+rm -fr /root/setup2.sh
 rm -fr /root/set-br.sh
 rm -fr /root/domain
 history -c
