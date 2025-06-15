@@ -252,12 +252,12 @@ echo -e "└──────────────────────�
 sleep 1
 wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/vnstat.sh && chmod +x vnstat.sh && ./vnstat.sh
 echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m          >>> Install SSH / WS <<<        \E[0m$NC"
+echo -e " \E[42;1;37m          >>> Install SSH / WS <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1
 wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/ssh-vpn2.sh && chmod +x ssh-vpn2.sh && ./ssh-vpn2.sh
 echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m            >>> Install Xray <<<         \E[0m$NC"
+echo -e " \E[42;1;37m            >>> Install Xray <<<         \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1
 wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/tools/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
