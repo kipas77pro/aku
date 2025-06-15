@@ -36,7 +36,7 @@ case $opt in
 8) clear ; reboot ;;
 9) clear ; clearlog ;;
 10) clear ; update-xray ;;
-11) clear ; cek-bw ;;
+11) clear ; set-bw ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-set ;;
 esac
