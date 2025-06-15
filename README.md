@@ -20,3 +20,7 @@ wget -O updatevray "raw.githubusercontent.com/kipas77pro/aku/main/updatevray.sh"
 ````
 wget -O upray "raw.githubusercontent.com/kipas77pro/aku/main/upray.sh" && chmod +x upray
 ````
+
+````
+wget -O up-ssh-vpn "raw.githubusercontent.com/kipas77pro/aku/main/up-ssh-vpn.sh" && chmod +x up-ssh-vpn
+````
