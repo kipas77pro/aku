@@ -233,8 +233,8 @@ sed -i '$ iproxy_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
 sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 
 sed -i '$ ilocation /' /etc/nginx/conf.d/xray.conf
-sed -i '$ i{' if $http_upgrade != "Upgrade" ' /etc/nginx/conf.d/xray.conf
-sed -i '$ i{'rewrite /(.*) /vmess break;' /etc/nginx/conf.d/xray.conf
+sed -i '$ i{' if $http_upgrade != "Upgrade" '
+sed -i '$ i{'rewrite /(.*) /vmess break;'
 sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_pass http://127.0.0.1:'"$vmess"';' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_http_version 1.1;' /etc/nginx/conf.d/xray.conf
