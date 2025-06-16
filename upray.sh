@@ -232,8 +232,9 @@ sed -i '$ iproxy_set_header Connection "upgrade";' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
 sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 
-sed -i '$ ilocation = /vmess' /etc/nginx/conf.d/xray.conf
-sed -i '$ i{' /etc/nginx/conf.d/xray.conf
+sed -i '$ ilocation / {
+if ($http_upgrade != "Upgrade") {
+rewrite /(.*) /vmess break;
 sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_pass http://127.0.0.1:'"$vmess"';' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_http_version 1.1;' /etc/nginx/conf.d/xray.conf
@@ -331,25 +332,29 @@ cat <<EOF> /etc/xray/config.json
      },
      {
      "listen": "127.0.0.1",
-     "port": "$vmess",
-     "protocol": "vmess",
+      "port": "$vmess",
+      "protocol": "vmess",
       "settings": {
-            "clients": [
-               {
-                 "id": "${uuid}",
-                 "alterId": 0
+        "clients": [
+          {
+            "id": "${uuid}",
+            "alterId": 0
 #vmess
-             }
-          ]
-       },
-       "streamSettings":{
-         "network": "ws",
-            "wsSettings": {
-                "path": "/vmess"
           }
+        ]
+      },
+      "streamSettings":{
+        "network": "ws",
+        "wsSettings": {
+          "path": "/",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
         }
-     },
-     {
+      }
+    },
+    {
      "listen": "127.0.0.1",
       "port": "$trojanws",
       "protocol": "trojan",
@@ -392,25 +397,29 @@ cat <<EOF> /etc/xray/config.json
      },
      {
       "listen": "127.0.0.1",
-      "port": "$vmessgrpc",
-     "protocol": "vmess",
+      "port": "$vmess",
+      "protocol": "vmess",
       "settings": {
-            "clients": [
-               {
-                 "id": "${uuid}",
-                 "alterId": 0
-#vmessgrpc
-             }
-          ]
-       },
-       "streamSettings":{
-         "network": "grpc",
-            "grpcSettings": {
-                "serviceName": "vmess-grpc"
+        "clients": [
+          {
+            "id": "${uuid}",
+            "alterId": 0
+#vmess-grpc
           }
+        ]
+      },
+      "streamSettings":{
+        "network": "grpc",
+        "grpcSettings": {
+          "serviceName": "vmess-grpc",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
         }
-     },
-     {
+      }
+    },
+    {
         "listen": "127.0.0.1",
         "port": "$trojangrpc",
         "protocol": "trojan",
