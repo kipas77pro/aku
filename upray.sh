@@ -278,37 +278,17 @@ cat <<EOF> /etc/xray/config.json
     "loglevel": "warning"
   },
   "inbounds": [
-      {
+    {
       "listen": "127.0.0.1",
-      "port": 10085,
+      "port": 10000,
       "protocol": "dokodemo-door",
       "settings": {
         "address": "127.0.0.1"
-      },
+        },
       "tag": "api"
     },
-   {
-     "listen": "127.0.0.1",
-     "port": "$vless",
-     "protocol": "vless",
-      "settings": {
-          "decryption":"none",
-            "clients": [
-               {
-                 "id": "${uuid}"                 
-#vless
-             }
-          ]
-       },
-       "streamSettings":{
-         "network": "ws",
-            "wsSettings": {
-                "path": "/vless"
-          }
-        }
-     },
-     {
-     "listen": "127.0.0.1",
+    {
+      "listen": "127.0.0.1",
       "port": "$vmess",
       "protocol": "vmess",
       "settings": {
@@ -332,49 +312,56 @@ cat <<EOF> /etc/xray/config.json
       }
     },
     {
-     "listen": "127.0.0.1",
+      "listen": "127.0.0.1",
+      "port": "$vless",
+      "protocol": "vless",
+      "settings": {
+        "decryption":"none",
+        "clients": [
+          {
+            "id": "${uuid}"
+#vless
+          }
+        ]
+      },
+      "streamSettings":{
+        "network": "ws",
+        "wsSettings": {
+          "path": "/vless",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "listen": "127.0.0.1",
       "port": "$trojanws",
       "protocol": "trojan",
       "settings": {
-          "decryption":"none",		
-           "clients": [
-              {
-                 "password": "${uuid}"
-#trojanws
-              }
-          ],
-         "udp": true
-       },
-       "streamSettings":{
-           "network": "ws",
-           "wsSettings": {
-               "path": "/trojan-ws"
-            }
-         }
-     },
-    {
-        "listen": "127.0.0.1",
-        "port": "$vlessgrpc",
-        "protocol": "vless",
-        "settings": {
-         "decryption":"none",
-           "clients": [
-             {
-               "id": "${uuid}"
-#vlessgrpc
-             }
+        "decryption":"none",
+        "clients": [
+          {
+            "password": "${uuid}"
+#trojan
+          }
+        ]
+      },
+      "streamSettings":{
+        "network": "ws",
+        "wsSettings": {
+          "path": "/trojan",
+          "alpn": [
+            "h2",
+            "http/1.1"
           ]
-       },
-          "streamSettings":{
-             "network": "grpc",
-             "grpcSettings": {
-                "serviceName": "vless-grpc"
-           }
         }
-     },
-     {
+      }
+    },
+    {
       "listen": "127.0.0.1",
-      "port": "$vmess",
+      "port": "$vmessgrpc",
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -397,25 +384,54 @@ cat <<EOF> /etc/xray/config.json
       }
     },
     {
-        "listen": "127.0.0.1",
-        "port": "$trojangrpc",
-        "protocol": "trojan",
-        "settings": {
-          "decryption":"none",
-             "clients": [
-               {
-                 "password": "${uuid}"
-#trojangrpc
-               }
-           ]
-        },
-         "streamSettings":{
-         "network": "grpc",
-           "grpcSettings": {
-               "serviceName": "trojan-grpc"
-         }
+      "listen": "127.0.0.1",
+      "port": "$vlessgrpc",
+      "protocol": "vless",
+      "settings": {
+        "decryption":"none",
+        "clients": [
+          {
+            "id": "${uuid}"
+#vless-grpc
+          }
+        ]
+      },
+      "streamSettings":{
+        "network": "grpc",
+        "grpcSettings": {
+          "serviceName": "vless-grpc",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
       }
-    }	
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": "$trojangrpc",
+      "protocol": "trojan",
+      "settings": {
+        "decryption":"none",
+        "clients": [
+          {
+            "password": "${uuid}"
+#trojan-grpc
+          }
+        ],
+        "udp": true
+      },
+      "streamSettings":{
+        "network": "grpc",
+        "grpcSettings": {
+          "serviceName": "trojan-grpc",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    }
   ],
   "outbounds": [
     {
@@ -488,6 +504,7 @@ cat <<EOF> /etc/xray/config.json
     }
   }
 }
+
 EOF
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.8.19
 # Installing Xray Service
