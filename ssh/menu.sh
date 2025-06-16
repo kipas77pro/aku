@@ -132,7 +132,7 @@ echo -e "${GREEN}  ${RED}▁ ${CYAN}▂ ${GREEN}▄ ${ORANGE}▅${PINK} ▆${GRE
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -e " ${BICyan}┌─────────────────────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}│ ${ORANGE} Version       : ${NC} GRATIS ${NC}"
+echo -e " ${BICyan}│ ${ORANGE} Version       : ${NC}PREMIUM 2025 V 7.0 ${NC}"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
