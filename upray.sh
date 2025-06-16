@@ -283,7 +283,7 @@ sed -i '$ igrpc_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;' /etc/ng
 sed -i '$ igrpc_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
 sed -i '$ igrpc_pass grpc://127.0.0.1:'"$trojangrpc"';' /etc/nginx/conf.d/xray.conf
 sed -i '$ i}' /etc/nginx/conf.d/xray.conf
-
+`"
 #pw sodosok
 openssl rand -base64 16 > /etc/xray/passwd
 bijikk=$(openssl rand -base64 16 )
