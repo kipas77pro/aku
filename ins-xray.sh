@@ -209,6 +209,8 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
              ssl_certificate_key /etc/xray/xray.key;
              ssl_ciphers EECDH+CHACHA20:EECDH+CHACHA20-draft:EECDH+ECDSA+AES128:EECDH+aRSA+AES128:RSA+AES128:EECDH+ECDSA+AES256:EECDH+aRSA+AES256:RSA+AES256:EECDH+ECDSA+3DES:EECDH+aRSA+3DES:RSA+3DES:!MD5;
              ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3;
+             ssl_certificate /usr/local/etc/xray/fullchain.crt;
+             ssl_certificate_key /usr/local/etc/xray/private.key;
              root /home/vps/public_html;
         }
 EOF
@@ -265,7 +267,8 @@ grpc_set_header X-Real-IP $remote_addr;
 grpc_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 grpc_set_header Host $http_host;
 grpc_pass grpc://127.0.0.1:700;
-
+}
+        }
 # set uuid xray
 uuid=$(cat /proc/sys/kernel/random/uuid)
 
