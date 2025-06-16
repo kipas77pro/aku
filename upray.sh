@@ -201,6 +201,7 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
              listen [::]:2096 ssl http2;
              listen 8443 ssl ssl http2;
              listen [::]:8443 ssl http2;
+             server_name 127.0.0.1 localhost;
              ssl_certificate /usr/local/etc/xray/fullchain.crt;
              ssl_certificate_key /usr/local/etc/xray/private.key;
              ssl_ciphers EECDH+CHACHA20:EECDH+CHACHA20-draft:EECDH+ECDSA+AES128:EECDH+aRSA+AES128:RSA+AES128:EECDH+ECDSA+AES256:EECDH+aRSA+AES256:RSA+AES256:EECDH+ECDSA+3DES:EECDH+aRSA+3DES:RSA+3DES:!MD5;
