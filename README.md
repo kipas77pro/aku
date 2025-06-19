@@ -29,3 +29,7 @@ wget -O up-ssh-vpn "raw.githubusercontent.com/kipas77pro/aku/main/up-ssh-vpn.sh"
 ````
 wget -O menu "raw.githubusercontent.com/kipas77pro/aku/main/opok/menu.sh" && chmod +x menu
 ````
+## udp
+````
+wget -O udepe "raw.githubusercontent.com/kipas77pro/aku/main/udepe" && chmod +x udepe
+````
