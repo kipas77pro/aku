@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
 NC='\033[0;37m' 
 PURPLE='\033[0;34m' 
 GREEN='\033[0;32m' 
@@ -59,7 +58,7 @@ echo -e "SSL/TLS    : 444, 445, 447, 777"
 echo -e "SSH HTTP   : $domen:80@$Login:$Pass"
 echo -e "UDPGW      : 7100-7300" 
 echo -e "${PURPLE}════════════════════════════════════${NC}"
-echo -e "PAYLOD WS : GET / HTTP/1.1[crlf]Host: [host_port][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
+echo -e "PAYLOD WS : GET /cdn-cgi/trace HTTP/1.1[crlf]Host: bug.com[crlf]Connection: Keep-Alive[crlf][crlf]GET-RAY / HTTP/1.1[crlf]Host: [host][crlf]Upgrade: websocket[crlf][crlf]"
 echo -e ""
 echo -e "PAYLOD WS/TLS : GET wss://[host_port]/ HTTP/1.1[crlf]Host: [host_port][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
 echo -e " "
@@ -84,7 +83,7 @@ echo -e "SSH HTTP   : $domen:80@$Login:$Pass"
 #echo -e "Link Ovpn  : http://$domen:81"
 echo -e "UDPGW      : 7100-7300" 
 echo -e "${PURPLE}════════════════════════════════════${NC}"
-echo -e "PAYLOD WS : GET / HTTP/1.1[crlf]Host: [host_port][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
+echo -e "PAYLOD WS : GET /cdn-cgi/trace HTTP/1.1[crlf]Host: bug.com[crlf]Connection: Keep-Alive[crlf][crlf]GET-RAY / HTTP/1.1[crlf]Host: [host][crlf]Upgrade: websocket[crlf][crlf]"
 echo -e " "
 echo -e "PAYLOD WS/TLS : GET wss://[host_port]/ HTTP/1.1[crlf]Host: [host_port][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
 echo -e " "
