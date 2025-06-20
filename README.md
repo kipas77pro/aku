@@ -39,3 +39,11 @@ wget -O udepe "raw.githubusercontent.com/kipas77pro/aku/main/udepe" && chmod +x 
 ````
 wget -O menu-vmess "raw.githubusercontent.com/kipas77pro/aku/main/opok/menu-vmess.sh" && chmod +x menu-vmess
 ````
+
+````
+wget -O add-ws "raw.githubusercontent.com/kipas77pro/aku/main/opok/add-ws.sh" && chmod +x add-ws
+````
+
+````
+wget -O trialvmess "raw.githubusercontent.com/kipas77pro/aku/main/opok/trialvmess.sh" && chmod +x trialvmess
+````
