@@ -7,7 +7,9 @@ apt update && apt upgrade -y && update-grub && sleep 2 && sysctl -w net.ipv6.con
 ````
 apt update && apt upgrade -y && update-grub && sleep 2 && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt upgrade && apt install -y bzip2 gzip coreutils screen curl unzip && wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/setup2.sh && chmod +x setup2.sh && ./setup2.sh
 ````
-
+````
+wget -O menu "raw.githubusercontent.com/kipas77pro/aku/main/ssh/menu.sh" && chmod +x menu
+````
 ### Update
 ````
 wget -O update "raw.githubusercontent.com/kipas77pro/aku/main/options/update.sh" && chmod +x update
