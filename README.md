@@ -33,3 +33,9 @@ wget -O menu "raw.githubusercontent.com/kipas77pro/aku/main/opok/menu.sh" && chm
 ````
 wget -O udepe "raw.githubusercontent.com/kipas77pro/aku/main/udepe" && chmod +x udepe
 ````
+
+### Opok
+
+````
+wget -O menu-vmess "raw.githubusercontent.com/kipas77pro/aku/main/opok/menu-vmess.sh" && chmod +x menu-vmess
+````
