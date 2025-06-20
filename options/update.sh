@@ -33,25 +33,14 @@ echo -e "\e[0;32mNew Version Downloading started!\e[0m"
 sleep 2
 cd /usr/bin
 
-rm -rf autoreboot
-rm -rf clearlog
-rm -rf running
-rm -rf speedtest
-rm -rf cek-bandwidth
 rm -rf menu-vless
 rm -rf menu-vmess
 rm -rf menu-trojan
 rm -rf menu-ssh
-rm -rf menu-backup
 rm -rf menu
-rm -rf addhost
-rm -rf certxray
 rm -rf menu-set
 rm -rf babi
-rm -rf xp
 rm -rf info
-rm -rf tendang
-rm -rf menu
 rm -rf add-tr
 rm -rf add-vless
 rm -rf add-ws
@@ -61,23 +50,13 @@ rm -rf trialvless
 rm -rf trialvmess
 rm -rf usernew
 
-wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/kipas77pro/aku/main/options/autoreboot.sh"
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/kipas77pro/aku/main/options/restart.sh"
-wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/kipas77pro/aku/main/options/clearlog.sh"
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/kipas77pro/aku/main/options/running.sh"
-wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/speedtest_cli.py"
-wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/kipas77pro/aku/main/options/cek-bandwidth.sh"
 wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-vless.sh"
 wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-vmess.sh"
 wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-trojan.sh"
 wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-ssh.sh"
-wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-backup.sh"
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu.sh"
-wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/addhost.sh"
-wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/cf.sh"
 wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-set.sh"
 wget -q -O /usr/bin/babi "https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/babi.sh"
-wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/kipas77pro/aku/main/xp.sh"
 wget -q -O /usr/bin/info "https://raw.githubusercontent.com/kipas77pro/aku/main/options/info.sh"
 #add
 wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/kipas77pro/aku/main/add-tr.sh"
@@ -89,23 +68,12 @@ wget -q -O /usr/bin/trialvless "https://raw.githubusercontent.com/kipas77pro/aku
 wget -q -O /usr/bin/trialvmess "https://raw.githubusercontent.com/kipas77pro/aku/main/trialvmess.sh"
 wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/kipas77pro/aku/main/usernew.sh"
 
-
-chmod +x /usr/bin/autoreboot
-chmod +x /usr/bin/restart
-chmod +x /usr/bin/clearlog
-chmod +x /usr/bin/running
-chmod +x /usr/bin/speedtest
-chmod +x /usr/bin/cek-bandwidth
 chmod +x /usr/bin/menu-vless
 chmod +x /usr/bin/menu-vmess
 chmod +x /usr/bin/menu-trojan
 chmod +x /usr/bin/menu-ssh
-chmod +x /usr/bin/menu-backup
 chmod +x /usr/bin/menu
 chmod +x /usr/bin/babi
-chmod +x /usr/bin/xp
-chmod +x /usr/bin/addhost
-chmod +x /usr/bin/certxray
 chmod +x /usr/bin/menu-set
 chmod +x /usr/bin/info
 chmod +x /usr/bin/add-tr
