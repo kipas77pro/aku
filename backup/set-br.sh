@@ -13,7 +13,7 @@ curl -fsSL https://rclone.org/install.sh | bash > /dev/null 2>&1
 printf "q\n" | rclone config > /dev/null 2>&1
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Downloading rclone config ... "
-wget -q -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/kipas77pro/tunel/main/backup/rclone.conf"
+wget -q -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/kipas77pro/aku/main/backup/rclone.conf"
 git clone https://github.com/magnific0/wondershaper.git &> /dev/null
 cd wondershaper
 sleep 1
@@ -36,10 +36,10 @@ sleep 1
 echo -e "[ ${green}INFO${NC} ] Creating service... "
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Downloading files... "
-wget -q -O /usr/bin/backup "https://raw.githubusercontent.com/kipas77pro/tunel/main/backup/backup.sh" && chmod +x /usr/bin/backup
-wget -q -O /usr/bin/restore "https://raw.githubusercontent.com/kipas77pro/tunel/main/backup/restore.sh" && chmod +x /usr/bin/restore
-wget -q -O /usr/bin/cleaner "https://raw.githubusercontent.com/kipas77pro/tunel/main/backup/cleaner.sh" && chmod +x /usr/bin/cleaner
-wget -q -O /usr/bin/autobackup "https://raw.githubusercontent.com/kipas77pro/tunel/main/backup/autobackup.sh" && chmod +x /usr/bin/autobackup
+wget -q -O /usr/bin/backup "https://raw.githubusercontent.com/kipas77pro/aku/main/backup/backup.sh" && chmod +x /usr/bin/backup
+wget -q -O /usr/bin/restore "https://raw.githubusercontent.com/kipas77pro/aku/main/backup/restore.sh" && chmod +x /usr/bin/restore
+wget -q -O /usr/bin/cleaner "https://raw.githubusercontent.com/kipas77pro/aku/main/backup/cleaner.sh" && chmod +x /usr/bin/cleaner
+wget -q -O /usr/bin/autobackup "https://raw.githubusercontent.com/kipas77pro/aku/main/backup/autobackup.sh" && chmod +x /usr/bin/autobackup
 
 service cron restart > /dev/null 2>&1
 
