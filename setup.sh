@@ -299,7 +299,7 @@ wget -q -O /usr/bin/info "https://raw.githubusercontent.com/kipas77pro/aku/main/
 wget -q -O /usr/bin/jam "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/jam.sh"
 wget -q -O /usr/bin/babi "https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/babi.sh"
 wget -q -O /usr/bin/update-xray "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/update-xray.sh"
-wget -q -O /usr/bin/set-bw "https://raw.githubusercontent.com/kipas77pro/aku/main/options/set-bw"
+wget -q -O /usr/bin/set-bw "https://raw.githubusercontent.com/kipas77pro/aku/main/options/set-bw.sh"
 
 chmod +x /usr/bin/jam
 chmod +x /usr/bin/update-xray
