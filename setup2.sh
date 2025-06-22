@@ -282,7 +282,7 @@ wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/kipas77pro/aku
 wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/kipas77pro/aku/main/options/restart.sh"
 wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/kipas77pro/aku/main/options/tendang.sh"
 wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/kipas77pro/aku/main/options/clearlog.sh"
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/kipas77pro/aku/main/options/running.sh"
+wget -q -O /usr/bin/running2 "https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/running2.sh"
 wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/speedtest_cli.py"
 wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/kipas77pro/aku/main/options/cek-bandwidth.sh"
 wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-vless.sh"
@@ -316,7 +316,7 @@ chmod +x /usr/bin/autoreboot
 chmod +x /usr/bin/restart
 chmod +x /usr/bin/tendang
 chmod +x /usr/bin/clearlog
-chmod +x /usr/bin/running
+chmod +x /usr/bin/running2
 chmod +x /usr/bin/speedtest
 chmod +x /usr/bin/cek-bandwidth
 chmod +x /usr/bin/menu-vless
