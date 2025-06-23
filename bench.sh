@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 clear
 clear
+echo -e ""
+echo -e ""
 trap _exit INT QUIT TERM
 
 _red() {
-    printf '\033[0;31;33m%b\033[0m' "$1"
+    printf '\033[0;31;31m%b\033[0m' "$1"
 }
 
 _green() {
@@ -424,5 +426,5 @@ next
 print_end_time
 next
 echo -e ""
-read -n 1 -s -r -p "   Press any key to back on menu"
+read -n 1 -s -r -p " Press any key to back on menu"
 menu
