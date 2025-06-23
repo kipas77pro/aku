@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-
+clear
+clear
 trap _exit INT QUIT TERM
 
 _red() {
