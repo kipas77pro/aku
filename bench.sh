@@ -3,7 +3,7 @@
 trap _exit INT QUIT TERM
 
 _red() {
-    printf '\033[0;31;31m%b\033[0m' "$1"
+    printf '\033[0;31;33m%b\033[0m' "$1"
 }
 
 _green() {
@@ -244,8 +244,8 @@ install_speedtest() {
 }
 
 print_intro() {
-    echo "------------------ Speedtest.sh Script By Arya Blitar -----------------"
-    echo " Version          : $(_green v2030-01-01)"
+    echo "----------------- Speedtest.sh Script By Arya Blitar -----------------"
+    echo " Version         : $(_green v2030-01-01)"
     #echo " Usage              : $(_red "wget -qO- bench.sh | bash")"
 }
 
@@ -422,3 +422,6 @@ install_speedtest && speed && rm -fr speedtest-cli
 next
 print_end_time
 next
+
+read -n 1 -s -r -p "   Press any key to back on menu"
+menu
