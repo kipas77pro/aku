@@ -129,7 +129,7 @@ fi
                 
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 echo -e "\033[0;34m┌──────────────────────────────────────────┐\033[0m"
-echo "          Memeriksa login Dropbear";
+echo "         Memeriksa login Dropbear";
 echo -e "\033[0;34m└──────────────────────────────────────────┘\033[0m"
 cat $LOG | grep -i dropbear | grep -i "Password auth succeeded" > /tmp/login-db.txt;
 for PID in "${data[@]}"
