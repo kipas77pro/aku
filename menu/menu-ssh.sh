@@ -129,7 +129,7 @@ fi
                 
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 echo -e "\033[0;34m┌──────────────────────────────────────────┐\033[0m"
-echo "    ID  |  Username  |  IP Address";
+echo "          Memeriksa login Dropbear";
 echo -e "\033[0;34m└──────────────────────────────────────────┘\033[0m"
 cat $LOG | grep -i dropbear | grep -i "Password auth succeeded" > /tmp/login-db.txt;
 for PID in "${data[@]}"
@@ -145,7 +145,7 @@ done
 echo -e "\033[0;34m└──────────────────────────────────────────┘\033[0m"
 echo " "
 echo -e "\033[0;34m┌──────────────────────────────────────────┐\033[0m"
-echo "    ID  |  Username  |  IP Address";
+echo "         Memeriksa login OpenSSH";
 echo -e "\033[0;34m└──────────────────────────────────────────┘\033[0m"
 cat $LOG | grep -i sshd | grep -i "Accepted password for" > /tmp/login-db.txt
 data=( `ps aux | grep "\[priv\]" | sort -k 72 | awk '{print $2}'`);
