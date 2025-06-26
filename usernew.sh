@@ -18,8 +18,6 @@ domen=`cat /etc/xray/domain`
 else
 domen=`cat /etc/v2ray/domain`
 fi
-portsshws=`cat /root/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
-wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "\E[42;1;37m        Create SSH Account         \E[0m"
@@ -31,9 +29,7 @@ read -p "Expired (hari): " masaaktif
 IP=$(curl -sS ifconfig.me);
 opensh=`cat /root/log-install.txt | grep -w "OpenSSH" | cut -f2 -d: | awk '{print $1}'`
 db=`cat /root/log-install.txt | grep -w "Dropbear" | cut -f2 -d: | awk '{print $1,$2}'`
-ssl="$(cat /root/log-install.txt | grep -w "Stunnel5" | cut -d: -f2)"
 
-sleep 1
 clear
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 hariini=`date -d "0 days" +"%Y-%m-%d"`
@@ -59,9 +55,13 @@ echo -e "SSL/TLS    : 444, 445, 447, 777"
 echo -e "SSH AC    : $domen:80@$Login:$Pass"
 echo -e "UDPGW      : 7100-7300" 
 echo -e "\033[0;34m══════════════════════════════════${NC}"
+echo -e " "
+echo -e "PAYLOD WSOKET : GET / HTTP/1.1[crlf]Host: [host_port][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
+echo -e ""
 echo -e "PAYLOD WS : GET /cdn-cgi/trace HTTP/1.1[crlf]Host: bug.com[crlf]Connection: Keep-Alive[crlf][crlf]GET-RAY / HTTP/1.1[crlf]Host: [host][crlf]Upgrade: websocket[crlf][crlf]"
 echo -e ""
 echo -e "PAYLOD WS/TLS : GET wss://[host_port]/ HTTP/1.1[crlf]Host: [host_port][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
+echo -e " "
 echo -e "\033[0;34m══════════════════════════════════${NC}"
 echo -e "\033[0;32m Sc By Arya Blitar ${NC}" 
 
@@ -83,9 +83,13 @@ echo -e "SSL/TLS    : 444, 445, 447, 777"
 echo -e "SSH ACC    : $domen:80@$Login:$Pass"
 echo -e "UDPGW      : 7100-7300" 
 echo -e "\033[0;34m══════════════════════════════════${NC}"
+echo -e " "
+echo -e "PAYLOD WSOKET : GET / HTTP/1.1[crlf]Host: [host_port][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
+echo -e ""
 echo -e "PAYLOD WS : GET /cdn-cgi/trace HTTP/1.1[crlf]Host: bug.com[crlf]Connection: Keep-Alive[crlf][crlf]GET-RAY / HTTP/1.1[crlf]Host: [host][crlf]Upgrade: websocket[crlf][crlf]"
 echo -e ""
 echo -e "PAYLOD WS/TLS : GET wss://[host_port]/ HTTP/1.1[crlf]Host: [host_port][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
+echo -e " "
 echo -e "\033[0;34m══════════════════════════════════${NC}"
 echo -e "\033[0;32m Sc By Arya Blitar${NC}"
 fi
