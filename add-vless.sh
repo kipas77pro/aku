@@ -1,18 +1,7 @@
 #!/bin/bash
 
 NC='\033[0;37m' 
-PURPLE='\033[0;34m' 
-GREEN='\033[0;32m' 
-green() { echo -e "\\033[32;1m${*}\\033[0m"; }
-red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-
-# // Export Align
-export BOLD="\e[1m"
-export WARNING="${red}\e[5m"
-export UNDERLINE="\e[4m"
-
 MYIP=$(curl -sS ipv4.icanhazip.com)
-
 clear
 source /var/lib/scrz-prem/ipvps.conf
 if [[ "$IP" = "" ]]; then
@@ -20,8 +9,8 @@ domain=$(cat /etc/xray/domain)
 else
 domain=$IP
 fi
-tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
-none="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ //g')"
+#tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
+#none="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 echo -e "\033[0;34m┌─────────────────────────────────────────────────┐\033[0m"
 echo -e "\033[0;34m│\E[42;1;37m            Create Xray/Vless Account            \033[0;34m│"
