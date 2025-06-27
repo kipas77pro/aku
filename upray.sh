@@ -188,6 +188,8 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
              listen [::]:2095;
              listen 2086;
              listen [::]:2086;
+             listen 8000;
+             listen [::]:8000;
              listen 443 ssl http2 reuseport;
              listen [::]:443 http2 reuseport;	
              listen 8443 ssl http2 reuseport;
@@ -200,6 +202,10 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
              listen [::]:2053 http2 reuseport;	
              listen 2083 ssl http2 reuseport;
              listen [::]:2083 http2 reuseport;	
+             listen 9443 ssl http2 reuseport;
+             listen [::]:9443 http2 reuseport;	
+             listen 4483 ssl http2 reuseport;
+             listen [::]:4483 http2 reuseport;	
              server_name 127.0.0.1 localhost;
              ssl_certificate /etc/xray/xray.crt;
              ssl_certificate_key /etc/xray/xray.key;
@@ -359,10 +365,10 @@ cat <<EOF> /etc/xray/config.json
               {
                  "password": "${uuid}"
 #trojanws
-### PRIBADI 2025-07-21
-},{"password": "58d9b657-2438-4e16-8aa4-a82f8b333c86","email": "PRIBADI"
-### Pribadi 2025-06-23
-},{"password": "5172167c-3522-47e2-984d-0bfd4987a238","email": "Pribadi"
+### akua 2033-09-10
+},{"password": "1ab2e493-0901-4f79-90da-1aace3aa66b0","email": "akua"
+### trojango 2025-07-16
+},{"password": "5c27f3eb-9f79-4c97-b373-6efb10bd1245","email": "trojango"
               }
           ],
          "udp": true
@@ -424,10 +430,10 @@ cat <<EOF> /etc/xray/config.json
                {
                  "password": "${uuid}"
 #trojangrpc
-### PRIBADI 2025-07-21
-},{"password": "58d9b657-2438-4e16-8aa4-a82f8b333c86","email": "PRIBADI"
-### Pribadi 2025-06-23
-},{"password": "5172167c-3522-47e2-984d-0bfd4987a238","email": "Pribadi"
+### akua 2033-09-10
+},{"password": "1ab2e493-0901-4f79-90da-1aace3aa66b0","email": "akua"
+### trojango 2025-07-16
+},{"password": "5c27f3eb-9f79-4c97-b373-6efb10bd1245","email": "trojango"
                }
            ]
         },
