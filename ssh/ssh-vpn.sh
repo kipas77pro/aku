@@ -133,6 +133,7 @@ systemctl start ws-stunnel >/dev/null 2>&1
 systemctl restart ws-stunnel >/dev/null 2>&1
 
 clear
+cd
 
 cat > /etc/systemd/system/rc-local.service <<-END
 [Unit]
