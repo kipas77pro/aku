@@ -5,7 +5,7 @@ PURPLE='\033[0;34m'
 GREEN='\033[0;32m' 
 RED='\033[0;31m'
 BIWhite='\033[1;97m'  
-red() { echo -e "\\033[31;1m${*}\\033[0m"; }
+COLOR1='\033[1;34m'
 
 clear
 clear
