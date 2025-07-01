@@ -6,8 +6,7 @@ GREEN='\033[0;32m'
 RED='\033[0;31m'
 BIWhite='\033[1;97m'  
 COLOR1='\033[1;34m'
-
-
+red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 clear
 clear
 
@@ -35,7 +34,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
     echo ""
   	grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
     echo ""
-    #red "tap enter to go back"
+    red "tap enter to go back"
     echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 	read -rp "Input Username : " user
     if [ -z $user ]; then
@@ -88,7 +87,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 	echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 	grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
     echo ""
-    #red "tap enter to go back"
+    red "tap enter to go back"
     echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 	read -rp "Input Username : " user
     if [ -z $user ]; then
