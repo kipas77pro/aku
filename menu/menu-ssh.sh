@@ -2,13 +2,10 @@
 NC='\033[0;37m' 
 PURPLE='\033[0;34m' 
 GREEN='\033[0;32m' 
-green() { echo -e "\\033[32;1m${*}\\033[0m"; }
+RED='\033[0;31m'
+BIWhite='\033[1;97m'  
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 
-# // Export Align
-export BOLD="\e[1m"
-export WARNING="${red}\e[5m"
-export UNDERLINE="\e[4m"
 clear
 function del(){
 clear
