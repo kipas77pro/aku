@@ -188,8 +188,6 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
              listen [::]:2095;
              listen 2086;
              listen [::]:2086;
-             listen 8000;
-             listen [::]:8000;
              listen 443 ssl http2 reuseport;
              listen [::]:443 http2 reuseport;	
              listen 8443 ssl http2 reuseport;
@@ -202,10 +200,6 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
              listen [::]:2053 http2 reuseport;	
              listen 2083 ssl http2 reuseport;
              listen [::]:2083 http2 reuseport;	
-             listen 9443 ssl http2 reuseport;
-             listen [::]:9443 http2 reuseport;	
-             listen 4483 ssl http2 reuseport;
-             listen [::]:4483 http2 reuseport;	
              server_name 127.0.0.1 localhost;
              ssl_certificate /etc/xray/xray.crt;
              ssl_certificate_key /etc/xray/xray.key;
@@ -345,6 +339,38 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmess
+### put 2025-07-14
+},{"id": "dee3a858-2e32-44f1-9ad6-dd5eb60656c7","alterId": 0,"email": "put"
+### fir30 2025-07-08
+},{"id": "504d1d2d-ebb8-4366-b6a5-9a2c12a56238","alterId": 0,"email": "fir30"
+### gacumata 2025-07-29
+},{"id": "67d101a9-a607-4e17-a18e-c05a6839a0d2","alterId": 0,"email": "gacumata"
+### cina 2025-08-26
+},{"id": "2861a997-b7c6-4573-99be-9a4f2d5f774b","alterId": 0,"email": "cina"
+### jadi 2025-07-27
+},{"id": "97ec6f36-1beb-47ef-9abb-c939fff18670","alterId": 0,"email": "jadi"
+### genta4 2025-07-27
+},{"id": "750ddc37-62b1-45a1-89db-24e1dc292e7e","alterId": 0,"email": "genta4"
+### genta2 2025-07-24
+},{"id": "ef3b3f9d-b3ae-4afd-975e-24413f511d59","alterId": 0,"email": "genta2"
+### genta1 2025-07-24
+},{"id": "5c3a2093-2079-48f3-93d2-d5ded13f019e","alterId": 0,"email": "genta1"
+### genta17 2025-07-21
+},{"id": "b72bd058-3bb4-4f5f-b059-9d5f62d3cbed","alterId": 0,"email": "genta17"
+### genta16 2025-07-20
+},{"id": "80a3a4ee-47ed-47f3-ba86-f079539a89bd","alterId": 0,"email": "genta16"
+### genta15 2025-07-16
+},{"id": "7ccb581a-5e3f-4aea-9f37-507741b78fe7","alterId": 0,"email": "genta15"
+### genta14 2025-07-16
+},{"id": "e80b6c29-63c3-4a59-bc25-2591ed667c1a","alterId": 0,"email": "genta14"
+### nal30 2025-07-11
+},{"id": "ccd6a21d-cb93-4848-93c0-e78f658655a4","alterId": 0,"email": "nal30"
+### genta13 2025-07-09
+},{"id": "b0b5ea2e-4c8e-405c-b1cd-19c6dbeca52e","alterId": 0,"email": "genta13"
+### genta12 2025-07-09
+},{"id": "990f6efe-7430-4c8c-aba8-47b5b01d30ea","alterId": 0,"email": "genta12"
+### fahrul30 2025-07-08
+},{"id": "c4068ed8-3181-41de-9e85-fa950b06bb7a","alterId": 0,"email": "fahrul30"
              }
           ]
        },
@@ -365,10 +391,6 @@ cat <<EOF> /etc/xray/config.json
               {
                  "password": "${uuid}"
 #trojanws
-### akua 2033-09-10
-},{"password": "1ab2e493-0901-4f79-90da-1aace3aa66b0","email": "akua"
-### trojango 2025-07-16
-},{"password": "5c27f3eb-9f79-4c97-b373-6efb10bd1245","email": "trojango"
               }
           ],
          "udp": true
@@ -410,6 +432,38 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmessgrpc
+### put 2025-07-14
+},{"id": "dee3a858-2e32-44f1-9ad6-dd5eb60656c7","alterId": 0,"email": "put"
+### fir30 2025-07-08
+},{"id": "504d1d2d-ebb8-4366-b6a5-9a2c12a56238","alterId": 0,"email": "fir30"
+### gacumata 2025-07-29
+},{"id": "67d101a9-a607-4e17-a18e-c05a6839a0d2","alterId": 0,"email": "gacumata"
+### cina 2025-08-26
+},{"id": "2861a997-b7c6-4573-99be-9a4f2d5f774b","alterId": 0,"email": "cina"
+### jadi 2025-07-27
+},{"id": "97ec6f36-1beb-47ef-9abb-c939fff18670","alterId": 0,"email": "jadi"
+### genta4 2025-07-27
+},{"id": "750ddc37-62b1-45a1-89db-24e1dc292e7e","alterId": 0,"email": "genta4"
+### genta2 2025-07-24
+},{"id": "ef3b3f9d-b3ae-4afd-975e-24413f511d59","alterId": 0,"email": "genta2"
+### genta1 2025-07-24
+},{"id": "5c3a2093-2079-48f3-93d2-d5ded13f019e","alterId": 0,"email": "genta1"
+### genta17 2025-07-21
+},{"id": "b72bd058-3bb4-4f5f-b059-9d5f62d3cbed","alterId": 0,"email": "genta17"
+### genta16 2025-07-20
+},{"id": "80a3a4ee-47ed-47f3-ba86-f079539a89bd","alterId": 0,"email": "genta16"
+### genta15 2025-07-16
+},{"id": "7ccb581a-5e3f-4aea-9f37-507741b78fe7","alterId": 0,"email": "genta15"
+### genta14 2025-07-16
+},{"id": "e80b6c29-63c3-4a59-bc25-2591ed667c1a","alterId": 0,"email": "genta14"
+### nal30 2025-07-11
+},{"id": "ccd6a21d-cb93-4848-93c0-e78f658655a4","alterId": 0,"email": "nal30"
+### genta13 2025-07-09
+},{"id": "b0b5ea2e-4c8e-405c-b1cd-19c6dbeca52e","alterId": 0,"email": "genta13"
+### genta12 2025-07-09
+},{"id": "990f6efe-7430-4c8c-aba8-47b5b01d30ea","alterId": 0,"email": "genta12"
+### fahrul30 2025-07-08
+},{"id": "c4068ed8-3181-41de-9e85-fa950b06bb7a","alterId": 0,"email": "fahrul30"
              }
           ]
        },
@@ -430,10 +484,6 @@ cat <<EOF> /etc/xray/config.json
                {
                  "password": "${uuid}"
 #trojangrpc
-### akua 2033-09-10
-},{"password": "1ab2e493-0901-4f79-90da-1aace3aa66b0","email": "akua"
-### trojango 2025-07-16
-},{"password": "5c27f3eb-9f79-4c97-b373-6efb10bd1245","email": "trojango"
                }
            ]
         },
