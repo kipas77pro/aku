@@ -26,6 +26,11 @@ wget -O upray "raw.githubusercontent.com/kipas77pro/aku/main/upray.sh" && chmod 
 ````
 wget -O up-ssh-vpn "raw.githubusercontent.com/kipas77pro/aku/main/up-ssh-vpn.sh" && chmod +x up-ssh-vpn
 ````
+
+````
+wget -O up-ins-xray-opok "raw.githubusercontent.com/kipas77pro/aku/main/up-ins-xray-opok.sh" && chmod +x up-ins-xray-opok
+````
+
 ### Menu Singapore
 
 ````
