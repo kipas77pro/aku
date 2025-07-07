@@ -25,7 +25,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python3 -O /etc/websocket/ws.py 10015
+ExecStart=/usr/bin/python3 -O /etc/websocket/ws.py 700
 Restart=on-failure
 
 [Install]
@@ -50,7 +50,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python3 -O /etc/websocket/ws.py 10012
+ExecStart=/usr/bin/python3 -O /etc/websocket/ws.py 700
 Restart=on-failure
 
 [Install]
