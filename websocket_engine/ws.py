@@ -10,7 +10,7 @@ LISTENING_ADDR = '127.0.0.1'
 if len(sys.argv) > 1:
     LISTENING_PORT = sys.argv[1]
 else:
-    LISTENING_PORT = 10015
+    LISTENING_PORT = 700
 # Pass
 PASS = ''
 
