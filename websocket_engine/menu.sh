@@ -52,10 +52,6 @@ if [[ $ssh_ws == "running" ]]; then
 else
     status_ws_epro="${red} [OFF] ${NC} "
 fi
-
-else
-ressshws="${red}OFF${NC}"
-fi
 ngx=$(service nginx status | grep active | cut -d ' ' $stat)
 if [ "$ngx" = "active" ]; then
 resngx="${green}ON${NC}"
