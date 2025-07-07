@@ -212,9 +212,9 @@ fi
 # // SSH Websocket Proxy
 ssh_ws=$( systemctl status ws | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $ssh_ws == "running" ]]; then
-    status_ws_epro="${green}ON${NC}"
+    status_ws_epro="${GREEN}Running ${NC}( No Error )"
 else
-    status_ws_epro="${red} [OFF] ${NC} "
+    status_ws_epro="${RED}  Not Running ${NC}  ( Error )"
 fi
 
 # STATUS SERVICE WEBSOCKET DROPBEAR
