@@ -45,11 +45,12 @@ fi
 #else
 #resst="${red}OFF${NC}"
 #fi
-sshws=$(service ws-stunnel status | grep active | cut -d ' ' $stat)
-if [ "$sshws" = "active" ]; then
-ressshws="${green}ON${NC}"
+# // SSH Websocket Proxy
+ssh_ws=$( systemctl status ws | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
+if [[ $ssh_ws == "running" ]]; then
+    status_ws_epro="${green}ON${NC}"
 else
-ressshws="${red}OFF${NC}"
+    status_ws_epro="${red} [OFF] ${NC} "
 fi
 ngx=$(service nginx status | grep active | cut -d ' ' $stat)
 if [ "$ngx" = "active" ]; then
@@ -119,7 +120,7 @@ echo -e "${BICyan} │                    ${NC}ALLXRAY ${ICyan}: ${ORANGE}$vma  
 echo -e " ${BICyan}╰═════════════════════════════════════════════════════╯${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "          ${NC} SSH ${ORANGE}: ${RED}$ressh"" ${NC} NGINX ${ORANGE}: ${RED}$resngx"" ${NC}  XRAY ${ORANGE}: ${RED}$resv2r"
-echo -e " ${NC}      TROJAN ${ORANGE}: ${RED}$resv2r"" ${NC} DROPBEAR ${ORANGE}: ${RED}$resdbr" "${NC} SSH-WS ${ORANGE}: ${RED}$ressshws"
+echo -e " ${NC}      TROJAN ${ORANGE}: ${RED}$resv2r"" ${NC} DROPBEAR ${ORANGE}: ${RED}$resdbr" "${NC} SSH-WS ${ORANGE}: ${RED}$status_ws_epro"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "      ${NC} Hari ini                    Bulan ini  ${NC}"
 echo -e "    ${ORANGE}↓↓ Down:${NC} $dtoday${ORANGE}          ↓↓ Down:${NC} $dmon${NC}   "
