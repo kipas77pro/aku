@@ -343,20 +343,10 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmess
-### mas30 2025-08-04
-},{"id": "f8b00a0b-e1c2-4694-a53e-f76da200990f","alterId": 0,"email": "mas30"
-### lam 2025-08-01
-},{"id": "e55f4594-eea9-4db8-87d0-9ff81cc8052f","alterId": 0,"email": "lam"
-### roni 2025-08-03
-},{"id": "d6a1cd1f-9b64-4b7f-90b4-a7a2e142e1b6","alterId": 0,"email": "roni"
-### masd15 2025-07-25
-},{"id": "dedbd9fc-5dda-4b89-b4e4-206d733dfea2","alterId": 0,"email": "masd15"
-### nanda30 2025-07-17
-},{"id": "5eab9c4f-c70b-4e28-9135-809db4418f19","alterId": 0,"email": "nanda30"
-### iya30 2025-07-11
-},{"id": "fa83beeb-550e-49aa-a8d4-6edf7efc583e","alterId": 0,"email": "iya30"
-### om30 2025-07-09
-},{"id": "d1128233-3419-45bc-819c-112a8d0ac833","alterId": 0,"email": "om30"
+### tok 2025-08-01
+},{"id": "5c476cc8-495e-4700-b3a7-afb93fc41d67","alterId": 0,"email": "tok"
+### dwi30 2025-07-22
+},{"id": "efbc2d09-aedb-4d5c-b25b-a6fba81cb579","alterId": 0,"email": "dwi30"
              }
           ]
        },
@@ -418,20 +408,10 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmessgrpc
-### mas30 2025-08-04
-},{"id": "f8b00a0b-e1c2-4694-a53e-f76da200990f","alterId": 0,"email": "mas30"
-### lam 2025-08-01
-},{"id": "e55f4594-eea9-4db8-87d0-9ff81cc8052f","alterId": 0,"email": "lam"
-### roni 2025-08-03
-},{"id": "d6a1cd1f-9b64-4b7f-90b4-a7a2e142e1b6","alterId": 0,"email": "roni"
-### masd15 2025-07-25
-},{"id": "dedbd9fc-5dda-4b89-b4e4-206d733dfea2","alterId": 0,"email": "masd15"
-### nanda30 2025-07-17
-},{"id": "5eab9c4f-c70b-4e28-9135-809db4418f19","alterId": 0,"email": "nanda30"
-### iya30 2025-07-11
-},{"id": "fa83beeb-550e-49aa-a8d4-6edf7efc583e","alterId": 0,"email": "iya30"
-### om30 2025-07-09
-},{"id": "d1128233-3419-45bc-819c-112a8d0ac833","alterId": 0,"email": "om30"
+### tok 2025-08-01
+},{"id": "5c476cc8-495e-4700-b3a7-afb93fc41d67","alterId": 0,"email": "tok"
+### dwi30 2025-07-22
+},{"id": "efbc2d09-aedb-4d5c-b25b-a6fba81cb579","alterId": 0,"email": "dwi30"
              }
           ]
        },
