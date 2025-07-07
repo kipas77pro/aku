@@ -5,6 +5,4 @@ exit
 fi
 if [ $1 == "dropbear" ] >/dev/null 2>&1 ; then
 /ws/ws
-elif [ $1 == "openvpn" ]; then
-ws 8000
 fi
