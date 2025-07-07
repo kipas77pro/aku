@@ -343,12 +343,20 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmess
-### tuup 2025-07-30
-},{"id": "47a7f773-f908-4fa2-a77e-ad42275a6f05","alterId": 0,"email": "tuup"
-### abah 2025-07-20
-},{"id": "0c3133eb-99f2-4029-9fbf-17c988029684","alterId": 0,"email": "abah"
-### wil30 2025-07-11
-},{"id": "5f574ef5-e364-4f08-8001-cf0ce7ce4a06","alterId": 0,"email": "wil30"
+### mas30 2025-08-04
+},{"id": "f8b00a0b-e1c2-4694-a53e-f76da200990f","alterId": 0,"email": "mas30"
+### lam 2025-08-01
+},{"id": "e55f4594-eea9-4db8-87d0-9ff81cc8052f","alterId": 0,"email": "lam"
+### roni 2025-08-03
+},{"id": "d6a1cd1f-9b64-4b7f-90b4-a7a2e142e1b6","alterId": 0,"email": "roni"
+### masd15 2025-07-25
+},{"id": "dedbd9fc-5dda-4b89-b4e4-206d733dfea2","alterId": 0,"email": "masd15"
+### nanda30 2025-07-17
+},{"id": "5eab9c4f-c70b-4e28-9135-809db4418f19","alterId": 0,"email": "nanda30"
+### iya30 2025-07-11
+},{"id": "fa83beeb-550e-49aa-a8d4-6edf7efc583e","alterId": 0,"email": "iya30"
+### om30 2025-07-09
+},{"id": "d1128233-3419-45bc-819c-112a8d0ac833","alterId": 0,"email": "om30"
              }
           ]
        },
@@ -410,12 +418,20 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmessgrpc
-### tuup 2025-07-30
-},{"id": "47a7f773-f908-4fa2-a77e-ad42275a6f05","alterId": 0,"email": "tuup"
-### abah 2025-07-20
-},{"id": "0c3133eb-99f2-4029-9fbf-17c988029684","alterId": 0,"email": "abah"
-### wil30 2025-07-11
-},{"id": "5f574ef5-e364-4f08-8001-cf0ce7ce4a06","alterId": 0,"email": "wil30"
+### mas30 2025-08-04
+},{"id": "f8b00a0b-e1c2-4694-a53e-f76da200990f","alterId": 0,"email": "mas30"
+### lam 2025-08-01
+},{"id": "e55f4594-eea9-4db8-87d0-9ff81cc8052f","alterId": 0,"email": "lam"
+### roni 2025-08-03
+},{"id": "d6a1cd1f-9b64-4b7f-90b4-a7a2e142e1b6","alterId": 0,"email": "roni"
+### masd15 2025-07-25
+},{"id": "dedbd9fc-5dda-4b89-b4e4-206d733dfea2","alterId": 0,"email": "masd15"
+### nanda30 2025-07-17
+},{"id": "5eab9c4f-c70b-4e28-9135-809db4418f19","alterId": 0,"email": "nanda30"
+### iya30 2025-07-11
+},{"id": "fa83beeb-550e-49aa-a8d4-6edf7efc583e","alterId": 0,"email": "iya30"
+### om30 2025-07-09
+},{"id": "d1128233-3419-45bc-819c-112a8d0ac833","alterId": 0,"email": "om30"
              }
           ]
        },
