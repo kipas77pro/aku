@@ -39,12 +39,12 @@ ressh="${green}ON${NC}"
 else
 ressh="${red}OFF${NC}"
 fi
-#sshstunel=$(service stunnel5 status | grep active | cut -d ' ' $stat)
-#if [ "$sshstunel" = "active" ]; then
-#resst="${green}ON${NC}"
-#else
-#resst="${red}OFF${NC}"
-#fi
+sshstunel=$(service stunnel5 status | grep active | cut -d ' ' $stat)
+if [ "$sshstunel" = "active" ]; then
+resst="${green}ON${NC}"
+else
+resst="${red}OFF${NC}"
+fi
 # // SSH Websocket Proxy
 ssh_ws=$( systemctl status ws | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $ssh_ws == "running" ]]; then
@@ -119,13 +119,15 @@ echo -e "${BICyan} │                    ${NC}SSH     ${ICyan}: ${ORANGE}$ssh1 
 echo -e "${BICyan} │                    ${NC}ALLXRAY ${ICyan}: ${ORANGE}$vma     ${NC} "
 echo -e " ${BICyan}╰═════════════════════════════════════════════════════╯${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "          ${NC} SSH ${ORANGE}: ${RED}$ressh"" ${NC} NGINX ${ORANGE}: ${RED}$resngx"" ${NC}  XRAY ${ORANGE}: ${RED}$resv2r"
-echo -e " ${NC}      TROJAN ${ORANGE}: ${RED}$resv2r"" ${NC} DROPBEAR ${ORANGE}: ${RED}$resdbr" "${NC} SSH-WS ${ORANGE}: ${RED}$status_ws_epro"
+echo -e "    ${NC} SSH ${ORANGE}: ${RED}$ressh"" ${NC} NGINX ${ORANGE}: ${RED}$resngx"" ${NC}  XRAY ${ORANGE}: ${RED}$resv2r"" ${NC} TROJAN ${ORANGE}: ${RED}$resv2r"
+echo -e "  ${NC}     STUNNEL ${ORANGE}: ${RED}$resst" "${NC} DROPBEAR ${ORANGE}: ${RED}$resdbr" "${NC} SSH-WS ${ORANGE}: ${RED}$status_ws_epro"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
+echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "      ${NC} Hari ini                    Bulan ini  ${NC}"
 echo -e "    ${ORANGE}↓↓ Down:${NC} $dtoday${ORANGE}          ↓↓ Down:${NC} $dmon${NC}   "
 echo -e "    ${ORANGE}↑↑ Up  : ${NC}$utoday   ${ORANGE}       ↑↑ Up  : ${NC}$umon${NC}   "
 echo -e "    ${ORANGE}≈ Total:${NC} $ttoday  ${ORANGE}        ≈ Total: ${NC}$tmon${NC}   "
+echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "$BICyan   ┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$BICyan   │$NC\033[42m                    INFO MENU                    $BICyan│$NC"
 echo -e "$BICyan   └─────────────────────────────────────────────────┘${NC}"
@@ -143,7 +145,7 @@ echo -e "${GREEN}  ${RED}▁ ${CYAN}▂ ${GREEN}▄ ${ORANGE}▅${PINK} ▆${GRE
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -e " ${BICyan}┌─────────────────────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}│ ${ORANGE} Version       : ${NC}PREMIUM 2025 V 7.0 ${NC}"
+echo -e " ${BICyan}│ ${ORANGE} Version       : ${NC}PREMIUM 2025 V 7.0  ${NC}"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
@@ -158,7 +160,7 @@ case $opt in
 7) clear ; speedtest ;;
 8) clear ; info ;;
 9) clear ; gotop ;;
-10) clear ; running2 ;;
+10) clear ; running ;;
 11) clear ; update ;;
 12) clear ; babi ;;
 13) clear ; menu-set ;;
