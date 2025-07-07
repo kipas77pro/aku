@@ -31,6 +31,12 @@ wget -O up-ssh-vpn "raw.githubusercontent.com/kipas77pro/aku/main/up-ssh-vpn.sh"
 wget -O up-ins-xray-opok "raw.githubusercontent.com/kipas77pro/aku/main/up-ins-xray-opok.sh" && chmod +x up-ins-xray-opok
 ````
 
+### instal ws python3
+
+````
+wget -O install-ws "raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/install-ws.sh" && chmod +x install-ws
+````
+
 ### Menu Singapore
 
 ````
