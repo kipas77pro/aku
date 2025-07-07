@@ -256,6 +256,7 @@ echo -e " \E[42;1;37m          >>> Install SSH / WS <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1
 wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/ssh-vpn3.sh && chmod +x ssh-vpn3.sh && ./ssh-vpn3.sh
+wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/install-ws.sh.sh && chmod +x install-ws.sh && ./install-ws.sh
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[42;1;37m            >>> Install Xray <<<         \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
