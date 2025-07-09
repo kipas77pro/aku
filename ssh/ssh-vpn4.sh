@@ -250,6 +250,9 @@ connect = 127.0.0.1:22
 [openssh]
 accept = 777
 connect = 127.0.0.1:2253
+[openssh]
+accept = 445
+connect = 127.0.0.1:40000
 END
 
 # make a certificate
