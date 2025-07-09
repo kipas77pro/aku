@@ -93,7 +93,6 @@ update-rc.d -f apparmor remove >/dev/null 2>&1 # Ini mungkin tidak ada di semua 
 apt-get purge apparmor apparmor-utils -y >/dev/null 2>&1
 
 clear
-
 # --- Instalasi Tools Awal ---
 wget https://raw.githubusercontent.com/kipas77pro/vip/refs/heads/main/TOOLS/tools.sh -O tools.sh &> /dev/null
 chmod +x tools.sh
@@ -109,24 +108,6 @@ apt install git curl python3 apt  figlet python3-pip apt-transport-https ca-cert
 wget https://github.com/fullstorydev/grpcurl/releases/download/v1.9.1/grpcurl_1.9.1_linux_x86_64.tar.gz -O /tmp/grpcurl.tar.gz && tar -xzf /tmp/grpcurl.tar.gz -C /tmp/ && sudo mv /tmp/grpcurl /usr/local/bin/ && sudo chmod +x /usr/local/bin/grpcurl
 wget https://raw.githubusercontent.com/XTLS/Xray-core/main/app/stats/command/command.proto -O stats.proto
 
-cd /root/
-apt-get remove --purge nginx* -y
-apt-get remove --purge nginx-common* -y
-apt-get remove --purge nginx-full* -y
-apt-get remove --purge dropbear* -y
-apt-get remove --purge stunnel4* -y
-apt-get remove --purge apache2* -y
-apt-get remove --purge ufw* -y
-apt-get remove --purge firewalld* -y
-apt-get remove --purge exim4* -y
-apt autoremove -y
-apt update -y
-apt-get --reinstall --fix-missing install -y sudo dpkg psmisc socat jq ruby wondershaper python2 tmux nmap bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget vim net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential gcc g++ automake make autoconf perl m4 dos2unix dropbear libreadline-dev zlib1g-dev libssl-dev dirmngr libxml-parser-perl neofetch git lsof iptables iptables-persistent
-apt-get --reinstall --fix-missing install -y libreadline-dev zlib1g-dev libssl-dev python2 screen curl jq bzip2 gzip coreutils rsyslog iftop htop zip unzip net-tools sed gnupg gnupg1 bc sudo apt-transport-https build-essential dirmngr libxml-parser-perl neofetch screenfetch git lsof openssl easy-rsa fail2ban tmux vnstat dropbear libsqlite3-dev socat cron bash-completion ntpdate xz-utils sudo apt-transport-https gnupg2 gnupg1 dnsutils lsb-release chrony
-gem install lolcat
-apt update -y
-apt upgrade -y
-apt dist-upgrade -y
 clear
 clear && clear && clear
 clear;clear;clear
@@ -141,8 +122,6 @@ read -p "$( echo -e "${GREEN}Input Your Choose ? ${NC}(${YELLOW}1/2${NC})${NC} "
 if [[ $choose_domain == "2" ]]; then # // Using Automatic Domain
 mkdir -p /usr/bin
 rm -fr /usr/local/bin/xray
-rm -fr /usr/local/bin/stunnel
-rm -fr /usr/local/bin/stunnel5
 rm -fr /etc/nginx
 rm -fr /var/lib/scrz-prem/
 rm -fr /usr/bin/xray
@@ -234,8 +213,6 @@ exit 1
 fi
 mkdir -p /usr/bin
 rm -fr /usr/local/bin/xray
-rm -fr /usr/local/bin/stunnel
-rm -fr /usr/local/bin/stunnel5
 rm -fr /etc/nginx
 rm -fr /var/lib/scrz-prem/
 rm -fr /usr/bin/xray
