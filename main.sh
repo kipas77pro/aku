@@ -279,7 +279,7 @@ echo -e "┌──────────────────────�
 echo -e " \E[42;1;37m          >>> Install SSH / WS <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1
-wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/ssh-vpn3.sh && chmod +x ssh-vpn3.sh && ./ssh-vpn3.sh
+wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/ssh-vpn4.sh && chmod +x ssh-vpn4.sh && ./ssh-vpn4.sh
 wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/install-ws.sh && chmod +x install-ws.sh && ./install-ws.sh
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[42;1;37m            >>> Install Xray <<<         \E[0m$NC"
@@ -461,7 +461,7 @@ echo -e "Wa Me +6281931615811"
 echo  ""
 echo  "" | tee -a log-install.txt
 rm -fr /root/vnstat.sh
-rm -fr /root/ssh-vpn3.sh
+rm -fr /root/ssh-vpn4.sh
 rm -fr /root/ins-xray.sh
 rm -fr /root/setup.sh
 rm -fr /root/set-br.sh
