@@ -63,3 +63,10 @@ wget -O add-ws "raw.githubusercontent.com/kipas77pro/aku/main/opok/add-ws.sh" &&
 ````
 wget -O trialvmess "raw.githubusercontent.com/kipas77pro/aku/main/opok/trialvmess.sh" && chmod +x trialvmess
 ````
+
+
+### all os
+
+````
+apt update && apt upgrade -y && update-grub && sleep 2 && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt upgrade && apt install -y bzip2 gzip coreutils screen curl unzip && wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/main.sh && chmod +x main.sh && ./main.sh
+````
