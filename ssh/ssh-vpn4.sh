@@ -181,7 +181,6 @@ echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
 
 # // install squid for debian 9,10 & ubuntu 20.04
-# install squid for debian 11
 
 # setting vnstat
 apt -y install vnstat
@@ -226,7 +225,8 @@ apt-get -y remove sendmail* >/dev/null 2>&1
 apt autoremove -y >/dev/null 2>&1
 # install stunnel
 clear
-cd /root/
+
+cd
 apt install stunnel4 -y
 cat > /etc/stunnel/stunnel.conf <<-END
 cert = /etc/stunnel/stunnel.pem
