@@ -71,50 +71,6 @@ email=setyaaries9@gmail.com
 wget -q -O /etc/pam.d/common-password "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/password"
 chmod +x /etc/pam.d/common-password
 
-# go to root
-cd
-
-apt update
-apt install python3 -y
-apt install python3-pip -y
-apt install python3-requests -y
-
-mkdir -p /etc/websocket
-
-wget -q -O /usr/local/bin/ws-stunnel2 "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/ws-stunnel2"
-chmod +x /usr/local/bin/ws-stunnel2
-
-
-# Installing Service
-cat > /etc/systemd/system/ws-stunnel2.service << END
-[Unit]
-Description=Websocket
-Documentation=https://google.com
-After=network.target nss-lookup.target
-
-[Service]
-Type=simple
-User=root
-CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-NoNewPrivileges=true
-ExecStart=/usr/bin/python3 -O /etc/websocket/ws-stunnel2 700
-Restart=on-failure
-
-[Install]
-WantedBy=multi-user.target
-END
-
-systemctl daemon-reload >/dev/null 2>&1
-systemctl enable ws-stunnel2 >/dev/null 2>&1
-systemctl start ws-stunnel2 >/dev/null 2>&1
-systemctl restart ws-stunnel2 >/dev/null 2>&1
-
-[Install]
-WantedBy=multi-user.target
-END
-
-rm -f $0
 clear
 cd
 
