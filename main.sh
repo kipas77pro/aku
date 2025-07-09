@@ -94,7 +94,7 @@ apt-get purge apparmor apparmor-utils -y >/dev/null 2>&1
 
 clear
 # --- Instalasi Tools Awal ---
-wget https://raw.githubusercontent.com/kipas77pro/vip/refs/heads/main/TOOLS/tools.sh -O tools.sh &> /dev/null
+wget https://raw.githubusercontent.com/kipas77pro/aku/refs/heads/main/TOOLS/tools.sh -O tools.sh &> /dev/null
 chmod +x tools.sh
 bash tools.sh
 start=$(date +%s)
