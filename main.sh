@@ -94,9 +94,9 @@ apt-get purge apparmor apparmor-utils -y >/dev/null 2>&1
 
 clear
 # --- Instalasi Tools Awal ---
-wget https://raw.githubusercontent.com/kipas77pro/aku/refs/heads/main/TOOLS/tools.sh -O tools.sh &> /dev/null
-chmod +x tools.sh
-bash tools.sh
+#wget https://raw.githubusercontent.com/kipas77pro/aku/refs/heads/main/TOOLS/tools.sh -O tools.sh &> /dev/null
+#chmod +x tools.sh
+#bash tools.sh
 start=$(date +%s)
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
@@ -123,6 +123,8 @@ if [[ $choose_domain == "2" ]]; then # // Using Automatic Domain
 mkdir -p /usr/bin
 rm -fr /usr/local/bin/xray
 rm -fr /etc/nginx
+rm -fr /usr/local/bin/stunnel
+rm -fr /usr/local/bin/stunnel4
 rm -fr /var/lib/scrz-prem/
 rm -fr /usr/bin/xray
 rm -fr /etc/xray
@@ -214,6 +216,8 @@ fi
 mkdir -p /usr/bin
 rm -fr /usr/local/bin/xray
 rm -fr /etc/nginx
+rm -fr /usr/local/bin/stunnel
+rm -fr /usr/local/bin/stunnel4
 rm -fr /var/lib/scrz-prem/
 rm -fr /usr/bin/xray
 rm -fr /etc/xray
@@ -247,11 +251,11 @@ else
 echo -e "${EROR} Please Choose 1 & 2 Only !"
 exit 1
 fi
-#echo -e "┌─────────────────────────────────────────┐"
-#echo -e " \E[42;1;37m           >>> Install Tools <<<          \E[0m$NC"
-#echo -e "└─────────────────────────────────────────┘"
-#sleep 1
-#wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/vnstat.sh && chmod +x vnstat.sh && ./vnstat.sh
+echo -e "┌─────────────────────────────────────────┐"
+echo -e " \E[42;1;37m           >>> Install Tools <<<          \E[0m$NC"
+echo -e "└─────────────────────────────────────────┘"
+sleep 1
+wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/tools2.sh && chmod +x tools2.sh && ./tools2.sh
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[42;1;37m          >>> Install SSH / WS <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
@@ -292,7 +296,7 @@ wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/kipas77pro/aku
 wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-trojan.sh"
 wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-ssh.sh"
 wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-backup.sh"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/menu.sh"
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/menu.sh"
 wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/kipas77pro/aku/main/xp.sh"
 wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/addhost.sh"
 wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/cf.sh"
