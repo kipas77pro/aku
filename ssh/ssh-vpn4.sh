@@ -74,16 +74,6 @@ chmod +x /etc/pam.d/common-password
 # go to root
 cd
 
-apt update
-apt install python3 -y
-apt install python3-pip -y
-apt install python3-requests -y
-
-mkdir -p /etc/websocket
-
-
-cd
-
 cat > /etc/systemd/system/rc-local.service <<-END
 [Unit]
 Description=/etc/rc.local
