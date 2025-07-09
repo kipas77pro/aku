@@ -94,9 +94,9 @@ apt-get purge apparmor apparmor-utils -y >/dev/null 2>&1
 
 clear
 # --- Instalasi Tools Awal ---
-#wget https://raw.githubusercontent.com/kipas77pro/aku/refs/heads/main/TOOLS/tools.sh -O tools.sh &> /dev/null
-#chmod +x tools.sh
-#bash tools.sh
+wget https://raw.githubusercontent.com/kipas77pro/aku/refs/heads/main/tools2.sh -O tools2.sh &> /dev/null
+chmod +x tools2.sh
+bash tools2.sh
 start=$(date +%s)
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
@@ -251,11 +251,11 @@ else
 echo -e "${EROR} Please Choose 1 & 2 Only !"
 exit 1
 fi
-echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[42;1;37m           >>> Install Tools <<<          \E[0m$NC"
-echo -e "└─────────────────────────────────────────┘"
-sleep 1
-wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/tools2.sh && chmod +x tools2.sh && ./tools2.sh
+#echo -e "┌─────────────────────────────────────────┐"
+#echo -e " \E[42;1;37m           >>> Install Tools <<<          \E[0m$NC"
+#echo -e "└─────────────────────────────────────────┘"
+#sleep 1
+#wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/tools2.sh && chmod +x tools2.sh && ./tools2.sh
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[42;1;37m          >>> Install SSH / WS <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
@@ -285,7 +285,7 @@ wget -q -O /usr/bin/trialvless "https://raw.githubusercontent.com/kipas77pro/aku
 wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/kipas77pro/aku/main/add-tr.sh"
 wget -q -O /usr/bin/trialtrojan "https://raw.githubusercontent.com/kipas77pro/aku/main/trialtrojan.sh"
 wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/kipas77pro/aku/main/options/autoreboot.sh"
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/kipas77pro/aku/main/options/restart.sh"
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/restart.sh"
 wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/kipas77pro/aku/main/options/tendang.sh"
 wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/kipas77pro/aku/main/options/clearlog.sh"
 wget -q -O /usr/bin/running "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/running.sh"
