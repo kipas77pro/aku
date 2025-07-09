@@ -187,9 +187,6 @@ echo "/usr/sbin/nologin" >> /etc/shells
 
 # // install squid for debian 9,10 & ubuntu 20.04
 # install squid for debian 11
-apt -y install squid
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/kipas77pro/vip/refs/heads/main/SYSTEM/proxy3.js"
-sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
 apt -y install vnstat
@@ -233,10 +230,7 @@ apt-get -y --purge remove bind9* >/dev/null 2>&1
 apt-get -y remove sendmail* >/dev/null 2>&1
 apt autoremove -y >/dev/null 2>&1
 # finishing
-cd
 clear
-fi
-
 cd
 # install stunnel
 apt install stunnel4 -y
