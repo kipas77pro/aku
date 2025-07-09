@@ -39,7 +39,7 @@ ressh="${green}ON${NC}"
 else
 ressh="${red}OFF${NC}"
 fi
-sshstunel=$(service stunnel5 status | grep active | cut -d ' ' $stat)
+sshstunel=$(/etc/init.d/stunnel4 restart | grep active | cut -d ' ' $stat)
 if [ "$sshstunel" = "active" ]; then
 resst="${green}ON${NC}"
 else
@@ -120,7 +120,7 @@ echo -e "${BICyan} │                    ${NC}ALLXRAY ${ICyan}: ${ORANGE}$vma  
 echo -e " ${BICyan}╰═════════════════════════════════════════════════════╯${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "    ${NC} SSH ${ORANGE}: ${RED}$ressh"" ${NC} NGINX ${ORANGE}: ${RED}$resngx"" ${NC}  XRAY ${ORANGE}: ${RED}$resv2r"" ${NC} TROJAN ${ORANGE}: ${RED}$resv2r"
-echo -e "  ${NC}     STUNNEL ${ORANGE}: ${RED}$resst" "${NC} DROPBEAR ${ORANGE}: ${RED}$resdbr" "${NC} SSH-WS ${ORANGE}: ${RED}$status_ws_epro"
+echo -e "  ${NC}    STUNNEL4 ${ORANGE}: ${RED}$resst" "${NC} DROPBEAR ${ORANGE}: ${RED}$resdbr" "${NC} SSH-WS ${ORANGE}: ${RED}$status_ws_epro"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "      ${NC} Hari ini                    Bulan ini  ${NC}"
