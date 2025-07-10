@@ -76,7 +76,7 @@ vless_nontls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3
 trojan_server=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #trojangfw_server=$(systemctl status trojan | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 dropbear_status=$(/etc/init.d/dropbear status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-stunnel_service=$(/etc/init.d/stunnel5 status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+stunnel_service=$(/etc/init.d/stunnel4 status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #sstp_service=$(systemctl status accel-ppp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #squid_service=$(/etc/init.d/squid status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 ssh_service=$(/etc/init.d/ssh status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -244,7 +244,7 @@ echo -e " SSH / TUN               :$status_ssh"
 #echo -e " SSH / UDP               :$status_udp"
 #echo -e "OpenVPN                 :$status_openvpn"
 echo -e " Dropbear                :$status_beruangjatuh"
-echo -e " Stunnel5                :$status_stunnel"
+echo -e " Stunnel4                :$status_stunnel"
 #echo -e " Squid                   :$status_squid"
 echo -e " Fail2Ban                :$status_fail2ban"
 echo -e " Crons                   :$status_cron"
