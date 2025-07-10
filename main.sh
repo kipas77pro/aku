@@ -86,7 +86,6 @@ clear
 fi
 echo -e "${GREEN}Starting Installation............${NC}"
 # --- Disable AppArmor (Ubuntu 24.04) ---
-echo -e "${GREEN}Mematikan AppArmor...${NC}"
 systemctl disable --now apparmor >/dev/null 2>&1
 systemctl stop apparmor >/dev/null 2>&1
 update-rc.d -f apparmor remove >/dev/null 2>&1 # Ini mungkin tidak ada di semua sistem, tapi aman.
@@ -94,7 +93,8 @@ apt-get purge apparmor apparmor-utils -y >/dev/null 2>&1
 
 clear
 # --- Instalasi Tools Awal ---
-wget https://raw.githubusercontent.com/kipas77pro/aku/refs/heads/main/tools2.sh -O tools2.sh &> /dev/null
+echo -e "${GREEN}Instalasi Tools Awal...${NC}"
+wget https://raw.githubusercontent.com/kipas77pro/aku/refs/heads/main/tools2.sh -O tools2.sh
 chmod +x tools2.sh
 bash tools2.sh
 start=$(date +%s)
