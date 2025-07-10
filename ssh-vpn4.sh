@@ -177,8 +177,8 @@ sed -i 's/DROPBEAR_PORT=149/DROPBEAR_PORT=143/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 50000 -p 109 -p 110 -p 69"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
-/etc/init.d/ssh restart
-/etc/init.d/dropbear restart
+/etc/init.d/ssh restart >/dev/null 2>&1
+/etc/init.d/dropbear restart >/dev/null 2>&1
 
 # // install squid for debian 9,10 & ubuntu 20.04
 
@@ -226,38 +226,96 @@ apt autoremove -y >/dev/null 2>&1
 # install stunnel
 clear
 
+# Install Stunnel5
 cd /root/
-apt install stunnel4 -y
-cat > /etc/stunnel/stunnel.conf <<-END
-cert = /etc/stunnel/stunnel.pem
+wget -q "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/stunnel5.zip"
+unzip stunnel5.zip
+cd /root/stunnel
+chmod +x configure
+./configure
+make
+make install
+cd /root
+rm -r -f stunnel
+rm -f stunnel5.zip
+rm -fr /etc/stunnel5
+mkdir -p /etc/stunnel5
+chmod 644 /etc/stunnel5
+
+# Download Config Stunnel5
+cat > /etc/stunnel5/stunnel5.conf <<-END
+cert = /etc/xray/xray.crt
+key = /etc/xray/xray.key
 client = no
 socket = a:SO_REUSEADDR=1
 socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
-
 [dropbear]
 accept = 447
 connect = 127.0.0.1:109
+[dropbear]
+accept = 445
+connect = 127.0.0.1:143
 [openssh]
 accept = 444
 connect = 127.0.0.1:22
 [openssh]
 accept = 777
 connect = 127.0.0.1:2253
-[openssh]
-accept = 445
-connect = 127.0.0.1:40000
 END
 
 # make a certificate
-openssl genrsa -out key.pem 2048
-openssl req -new -x509 -key key.pem -out cert.pem -days 1095 \
--subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"
-cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
+#openssl genrsa -out key.pem 2048  >/dev/null 2>&1
+#openssl req -new -x509 -key key.pem -out cert.pem -days 1095 \
+#-subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"  >/dev/null 2>&1
+#cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
 
 # konfigurasi stunnel
-sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
-/etc/init.d/stunnel4 restart
+#echo "ENABLED=1" >> /etc/default/stunnel4
+#sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
+#systemctl daemon-reload >/dev/null 2>&1
+#/etc/init.d/stunnel4 start >/dev/null 2>&1
+#/etc/init.d/stunnel4 restart >/dev/null 2>&1
+
+# Service Stunnel5 systemctl restart stunnel5
+rm -fr /etc/systemd/system/stunnel5.service
+cat > /etc/systemd/system/stunnel5.service << END
+[Unit]
+Description=Stunnel5 Service
+Documentation=https://stunnel.org
+Documentation=https://nekopoi.care
+After=syslog.target network-online.target
+[Service]
+ExecStart=/usr/local/bin/stunnel5 /etc/stunnel5/stunnel5.conf
+Type=forking
+[Install]
+WantedBy=multi-user.target
+END
+
+# Service Stunnel5 /etc/init.d/stunnel5
+rm -fr /etc/init.d/stunnel5
+wget -q -O /etc/init.d/stunnel5 "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/stunnel5.init"
+
+# Ubah Izin Akses
+#chmod 600 /etc/stunnel5/stunnel5.pem
+chmod +x /etc/init.d/stunnel5
+cp -r /usr/local/bin/stunnel /usr/local/bin/stunnel5
+#mv /usr/local/bin/stunnel /usr/local/bin/stunnel5
+
+# Remove File
+rm -r -f /usr/local/share/doc/stunnel/
+rm -r -f /usr/local/etc/stunnel/
+rm -f /usr/local/bin/stunnel
+rm -f /usr/local/bin/stunnel3
+rm -f /usr/local/bin/stunnel4
+#rm -f /usr/local/bin/stunnel5
+
+# Restart Stunnel5
+systemctl daemon-reload >/dev/null 2>&1
+systemctl enable stunnel5 >/dev/null 2>&1
+systemctl start stunnel5 >/dev/null 2>&1
+systemctl restart stunnel5 >/dev/null 2>&1
+
 
 # Install bbr
 sleep 1
