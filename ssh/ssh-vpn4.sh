@@ -226,7 +226,7 @@ apt autoremove -y >/dev/null 2>&1
 # install stunnel
 clear
 
-cd /root/
+# cd /root/
 apt install stunnel4 -y
 cat > /etc/stunnel/stunnel.conf <<-END
 cert = /etc/stunnel/stunnel.pem
