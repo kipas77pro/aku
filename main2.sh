@@ -86,7 +86,6 @@ clear
 fi
 echo -e "${GREEN}Starting Installation............${NC}"
 # --- Disable AppArmor (Ubuntu 24.04) ---
-echo -e "${GREEN}Mematikan AppArmor...${NC}"
 systemctl disable --now apparmor >/dev/null 2>&1
 systemctl stop apparmor >/dev/null 2>&1
 update-rc.d -f apparmor remove >/dev/null 2>&1 # Ini mungkin tidak ada di semua sistem, tapi aman.
@@ -94,7 +93,8 @@ apt-get purge apparmor apparmor-utils -y >/dev/null 2>&1
 
 clear
 # --- Instalasi Tools Awal ---
-wget https://raw.githubusercontent.com/kipas77pro/aku/refs/heads/main/tools2.sh -O tools2.sh &> /dev/null
+echo -e "${GREEN}Instalasi Tools Awal...${NC}"
+wget https://raw.githubusercontent.com/kipas77pro/aku/refs/heads/main/tools2.sh -O tools2.sh
 chmod +x tools2.sh
 bash tools2.sh
 start=$(date +%s)
@@ -143,7 +143,7 @@ mkdir -p /usr/bin
 rm -fr /usr/local/bin/xray
 rm -fr /etc/nginx
 rm -fr /usr/local/bin/stunnel
-rm -fr /usr/local/bin/stunnel4
+rm -fr /usr/local/bin/stunnel5
 rm -fr /var/lib/scrz-prem/
 rm -fr /usr/bin/xray
 rm -fr /etc/xray
@@ -167,7 +167,7 @@ echo -e "┌──────────────────────�
 echo -e " \E[42;1;37m          >>> Install SSH / WS <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1
-wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/ssh-vpn4.sh && chmod +x ssh-vpn4.sh && ./ssh-vpn4.sh
+wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/ssh-vpn4.sh && chmod +x ssh-vpn4.sh && ./ssh-vpn4.sh
 wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/install-ws.sh && chmod +x install-ws.sh && ./install-ws.sh
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[42;1;37m            >>> Install Xray <<<         \E[0m$NC"
