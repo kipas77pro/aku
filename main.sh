@@ -120,6 +120,25 @@ echo -e "${YELLOW}-----------------------------------------------------${NC}"
 echo ""
 read -p "$( echo -e "${GREEN}Input Your Choose ? ${NC}(${YELLOW}1/2${NC})${NC} " )" choose_domain
 if [[ $choose_domain == "2" ]]; then # // Using Automatic Domain
+sleep 2
+elif [[ $choose_domain == "1" ]]; then
+clear
+clear && clear && clear
+clear;clear;clear
+echo -e "${GREEN}Indonesian Language${NC}"
+echo -e "${YELLOW}-----------------------------------------------------${NC}"
+echo -e "Silakan Pointing Domain Anda Ke IP VPS"
+echo -e "Untuk Caranya Arahkan NS Domain Ke Cloudflare"
+echo -e "Kemudian Tambahkan A Record Dengan IP VPS"
+echo -e "${YELLOW}-----------------------------------------------------${NC}"
+echo ""
+echo ""
+read -p "Input Your Domain : " domain
+if [[ $domain == "" ]]; then
+clear
+echo -e "${EROR} No Input Detected !"
+exit 1
+fi
 mkdir -p /usr/bin
 rm -fr /usr/local/bin/xray
 rm -fr /etc/nginx
@@ -134,11 +153,12 @@ mkdir -p /var/lib/scrz-prem/
 mkdir -p /usr/bin/xray
 mkdir -p /etc/xray
 mkdir -p /usr/local/etc/xray
-apt install jq curl -y
-rm -rf /root/xray/scdomain
-mkdir -p /root/xray
+echo "$domain" > /etc/${Auther}/domain.txt
+echo "IP=$domain" > /var/lib/scrz-prem/ipvps.conf
+echo "$domain" > /root/domain
+domain=$(cat /root/domain)
+cp -r /root/domain /etc/xray/domain
 clear
-
 else
 echo -e "${EROR} Please Choose 1 & 2 Only !"
 exit 1
