@@ -1,9 +1,4 @@
 #!/bin/bash
-# =========================================
-# Quick Setup | Script Setup Manager
-# Edition : Stable Edition V1.0
-# (C) Copyright 2025
-# =========================================
 
 clear
 BIBlack='\033[1;90m'      # Black
@@ -186,7 +181,6 @@ echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
 
 # // install squid for debian 9,10 & ubuntu 20.04
-# install squid for debian 11
 
 # setting vnstat
 apt -y install vnstat
@@ -229,10 +223,10 @@ apt-get -y --purge remove apache2* >/dev/null 2>&1
 apt-get -y --purge remove bind9* >/dev/null 2>&1
 apt-get -y remove sendmail* >/dev/null 2>&1
 apt autoremove -y >/dev/null 2>&1
-# finishing
-clear
-cd
 # install stunnel
+clear
+
+cd /root/
 apt install stunnel4 -y
 cat > /etc/stunnel/stunnel.conf <<-END
 cert = /etc/stunnel/stunnel.pem
@@ -250,6 +244,9 @@ connect = 127.0.0.1:22
 [openssh]
 accept = 777
 connect = 127.0.0.1:2253
+[openssh]
+accept = 445
+connect = 127.0.0.1:40000
 END
 
 # make a certificate
@@ -333,15 +330,6 @@ Optimize_Parameters
 sleep 1
 echo -e "[ ${green}INFO$NC ] Install successfully..."
 
-# memory swap 1gb
-cd
-dd if=/dev/zero of=/swapfile bs=1024 count=1048576
-mkswap /swapfile
-chown root:root /swapfile
-chmod 0600 /swapfile >/dev/null 2>&1
-swapon /swapfile >/dev/null 2>&1
-sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
-
 # install fail2ban
 # Instal DDOS Flate
 apt -y install fail2ban
@@ -404,12 +392,6 @@ if dpkg -s unscd >/dev/null 2>&1; then
 apt -y remove --purge unscd >/dev/null 2>&1
 fi
 
-# apt-get -y --purge remove samba* >/dev/null 2>&1
-# apt-get -y --purge remove apache2* >/dev/null 2>&1
-# apt-get -y --purge remove bind9* >/dev/null 2>&1
-# apt-get -y remove sendmail* >/dev/null 2>&1
-# apt autoremove -y >/dev/null 2>&1
-# finishing
 cd
 echo -e "[ ${green}ok${NC} ] Restarting Cron"
 /etc/init.d/cron restart >/dev/null 2>&1
