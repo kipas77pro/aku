@@ -177,8 +177,8 @@ sed -i 's/DROPBEAR_PORT=149/DROPBEAR_PORT=143/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 50000 -p 109 -p 110 -p 69"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
-/etc/init.d/ssh restart
-/etc/init.d/dropbear restart
+/etc/init.d/ssh restart >/dev/null 2>&1
+/etc/init.d/dropbear restart >/dev/null 2>&1
 
 # // install squid for debian 9,10 & ubuntu 20.04
 
@@ -257,7 +257,7 @@ cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
 
 # konfigurasi stunnel
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
-/etc/init.d/stunnel4 restart
+/etc/init.d/stunnel4 restart >/dev/null 2>&1
 
 # Install bbr
 sleep 1
