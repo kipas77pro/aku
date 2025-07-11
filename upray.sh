@@ -180,30 +180,8 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
     server {
              listen 80;
              listen [::]:80;
-             listen 8880;
-             listen [::]:8880;
-             listen 2082;
-             listen [::]:2082;
-             listen 8080;
-             listen [::]:8080;
-             listen 2052;
-             listen [::]:2052;
-             listen 2095;
-             listen [::]:2095;
-             listen 2086;
-             listen [::]:2086;
              listen 443 ssl http2 reuseport;
              listen [::]:443 http2 reuseport;	
-             listen 8443 ssl http2 reuseport;
-             listen [::]:8443 http2 reuseport;	
-             listen 2096 ssl http2 reuseport;
-             listen [::]:2096 http2 reuseport;	
-             listen 2087 ssl http2 reuseport;
-             listen [::]:2087 http2 reuseport;	
-             listen 2053 ssl http2 reuseport;
-             listen [::]:2053 http2 reuseport;	
-             listen 2083 ssl http2 reuseport;
-             listen [::]:2083 http2 reuseport;	
              server_name 127.0.0.1 localhost;
              ssl_certificate /etc/xray/xray.crt;
              ssl_certificate_key /etc/xray/xray.key;
@@ -343,30 +321,6 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmess
-### yabang 2025-08-09
-},{"id": "9138706b-8cec-4fd1-a1ee-ebe0d5cf4d93","alterId": 0,"email": "yabang"
-### najip 2025-08-08
-},{"id": "a37b0a19-637b-4140-aef8-1f9100d09c02","alterId": 0,"email": "najip"
-### faka 2025-07-18
-},{"id": "3f311d2c-47eb-427b-9cde-5a03ef70bfd1","alterId": 0,"email": "faka"
-### dian30 2025-07-28
-},{"id": "daacf1d9-c64d-4012-b6fa-3ade30c66b73","alterId": 0,"email": "dian30"
-### alie 2025-07-30
-},{"id": "72da62e8-0324-409e-912f-5f0b557424bd","alterId": 0,"email": "alie"
-### genta5 2025-07-29
-},{"id": "4776cc7c-3213-498d-9276-f96e635012b7","alterId": 0,"email": "genta5"
-### marm30 2025-07-21
-},{"id": "096ac511-4f78-4def-9303-585485c0b56e","alterId": 0,"email": "marm30"
-### atok30 2025-07-18
-},{"id": "366f6dff-fad7-4895-82b6-8bc70e5f532c","alterId": 0,"email": "atok30"
-### fathoyi30 2025-07-18
-},{"id": "9044301f-159c-4291-90af-b399707888d0","alterId": 0,"email": "fathoyi30"
-### pribadi 2033-08-25
-},{"id": "7c4ee36f-b35a-4db2-a371-1ee5bddb932e","alterId": 0,"email": "pribadi"
-### aki 2025-08-23
-},{"id": "0270f7fd-b26a-4e05-97a1-808433e51ee8","alterId": 0,"email": "aki"
-### opok 2025-08-18
-},{"id": "297f47fa-cf90-4ee9-8835-8935b351da38","alterId": 0,"email": "opok"
              }
           ]
        },
@@ -387,8 +341,6 @@ cat <<EOF> /etc/xray/config.json
               {
                  "password": "${uuid}"
 #trojanws
-### tro30 2025-07-28
-},{"password": "ba3c235d-2f68-4161-9239-7727f68e4a33","email": "tro30"
               }
           ],
          "udp": true
@@ -430,30 +382,6 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmessgrpc
-### yabang 2025-08-09
-},{"id": "9138706b-8cec-4fd1-a1ee-ebe0d5cf4d93","alterId": 0,"email": "yabang"
-### najip 2025-08-08
-},{"id": "a37b0a19-637b-4140-aef8-1f9100d09c02","alterId": 0,"email": "najip"
-### faka 2025-07-18
-},{"id": "3f311d2c-47eb-427b-9cde-5a03ef70bfd1","alterId": 0,"email": "faka"
-### dian30 2025-07-28
-},{"id": "daacf1d9-c64d-4012-b6fa-3ade30c66b73","alterId": 0,"email": "dian30"
-### alie 2025-07-30
-},{"id": "72da62e8-0324-409e-912f-5f0b557424bd","alterId": 0,"email": "alie"
-### genta5 2025-07-29
-},{"id": "4776cc7c-3213-498d-9276-f96e635012b7","alterId": 0,"email": "genta5"
-### marm30 2025-07-21
-},{"id": "096ac511-4f78-4def-9303-585485c0b56e","alterId": 0,"email": "marm30"
-### atok30 2025-07-18
-},{"id": "366f6dff-fad7-4895-82b6-8bc70e5f532c","alterId": 0,"email": "atok30"
-### fathoyi30 2025-07-18
-},{"id": "9044301f-159c-4291-90af-b399707888d0","alterId": 0,"email": "fathoyi30"
-### pribadi 2033-08-25
-},{"id": "7c4ee36f-b35a-4db2-a371-1ee5bddb932e","alterId": 0,"email": "pribadi"
-### aki 2025-08-23
-},{"id": "0270f7fd-b26a-4e05-97a1-808433e51ee8","alterId": 0,"email": "aki"
-### opok 2025-08-18
-},{"id": "297f47fa-cf90-4ee9-8835-8935b351da38","alterId": 0,"email": "opok"
              }
           ]
        },
@@ -474,8 +402,6 @@ cat <<EOF> /etc/xray/config.json
                {
                  "password": "${uuid}"
 #trojangrpc
-### tro30 2025-07-28
-},{"password": "ba3c235d-2f68-4161-9239-7727f68e4a33","email": "tro30"
                }
            ]
         },
