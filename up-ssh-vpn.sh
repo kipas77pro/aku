@@ -152,8 +152,6 @@ systemctl restart rc-local.service >/dev/null 2>&1
 
 # /etc/ssh/sshd_config
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
-sed -i 's/Port 22/Port 8080/g' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 2253' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 8080' /etc/ssh/sshd_config
 echo "Port 22" >> /etc/ssh/sshd_config
 echo "Port 40000" >> /etc/ssh/sshd_config
