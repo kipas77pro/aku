@@ -152,7 +152,9 @@ systemctl restart rc-local.service >/dev/null 2>&1
 
 # /etc/ssh/sshd_config
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
+sed -i 's/Port 22/Port 8080/g' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 2253' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 8080' /etc/ssh/sshd_config
 echo "Port 22" >> /etc/ssh/sshd_config
 echo "Port 40000" >> /etc/ssh/sshd_config
 echo "X11Forwarding yes" >> /etc/ssh/sshd_config
@@ -201,7 +203,7 @@ accept = 444
 connect = 127.0.0.1:22
 [openssh]
 accept = 777
-connect = 127.0.0.1:2253
+connect = 127.0.0.1:8080
 END
 
 # Service Stunnel5 systemctl restart stunnel5
@@ -313,9 +315,6 @@ Install_BBR
 Optimize_Parameters
 sleep 1
 echo -e "[ ${green}INFO$NC ] Install successfully..."
-
-
-#!/bin/bash
 
 # install squid
 cd
