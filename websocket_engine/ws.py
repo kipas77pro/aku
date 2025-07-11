@@ -1,8 +1,9 @@
-#!/usr/bin/env python3
-# encoding: utf-8
-import socket, threading, thread, select, signal, sys, time
-from os import system
-system("clear")
+import socket
+import threading
+import select
+import sys
+import time
+import getopt
 
 # Listen
 LISTENING_ADDR = '127.0.0.1'
