@@ -352,6 +352,12 @@ Optimize_Parameters
 sleep 1
 echo -e "[ ${green}INFO$NC ] Install successfully..."
 
+# install squid
+#cd
+#apt -y install squid3
+#wget -O /etc/squid/squid.conf "raw.githubusercontent.com/kipas77pro/aku/main/ssh/squid3.conf"
+#sed -i $MYIP2 /etc/squid/squid.conf
+
 # memory swap 1gb
 cd
 dd if=/dev/zero of=/swapfile bs=1024 count=1048576
