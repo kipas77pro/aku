@@ -180,8 +180,30 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
     server {
              listen 80;
              listen [::]:80;
+             listen 8880;
+             listen [::]:8880;
+             listen 2082;
+             listen [::]:2082;
+             listen 8080;
+             listen [::]:8080;
+             listen 2052;
+             listen [::]:2052;
+             listen 2095;
+             listen [::]:2095;
+             listen 2086;
+             listen [::]:2086;
              listen 443 ssl http2 reuseport;
              listen [::]:443 http2 reuseport;	
+             listen 8443 ssl http2 reuseport;
+             listen [::]:8443 http2 reuseport;	
+             listen 2096 ssl http2 reuseport;
+             listen [::]:2096 http2 reuseport;	
+             listen 2087 ssl http2 reuseport;
+             listen [::]:2087 http2 reuseport;	
+             listen 2053 ssl http2 reuseport;
+             listen [::]:2053 http2 reuseport;	
+             listen 2083 ssl http2 reuseport;
+             listen [::]:2083 http2 reuseport;	
              server_name 127.0.0.1 localhost;
              ssl_certificate /etc/xray/xray.crt;
              ssl_certificate_key /etc/xray/xray.key;
@@ -321,6 +343,8 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmess
+### akuaja 2025-09-09
+},{"id": "e9c2c281-ee73-41ff-bfa0-81d1a16c4598","alterId": 0,"email": "akuaja"
              }
           ]
        },
@@ -382,6 +406,8 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmessgrpc
+### akuaja 2025-09-09
+},{"id": "e9c2c281-ee73-41ff-bfa0-81d1a16c4598","alterId": 0,"email": "akuaja"
              }
           ]
        },
