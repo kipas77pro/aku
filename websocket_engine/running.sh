@@ -17,11 +17,6 @@ bd='\e[1m'
 color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
-# Getting
-# IP Validation
-#dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-#biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
-#########################
 
 MYIP=$(curl -sS ipinfo.io/ip)
 
@@ -83,10 +78,12 @@ ssh_service=$(/etc/init.d/ssh status | grep Active | awk '{print $3}' | cut -d "
 vnstat_service=$(/etc/init.d/vnstat status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 cron_service=$(/etc/init.d/cron status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 fail2ban_service=$(/etc/init.d/fail2ban status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+ssh_ws=$(/systemctl status ws | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+#ssh_ws=$( systemctl status ws | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 #wg="$(systemctl show wg-quick@wg0.service --no-page)"
 #swg=$(echo "${wg}" | grep 'ActiveState=' | cut -f2 -d=)
-trgo="$(systemctl show trojan-go.service --no-page)"                                      
-strgo=$(echo "${trgo}" | grep 'ActiveState=' | cut -f2 -d=)  
+#trgo="$(systemctl show trojan-go.service --no-page)"                                      
+#strgo=$(echo "${trgo}" | grep 'ActiveState=' | cut -f2 -d=)  
 #sswg=$(systemctl status wg-quick@wg0 | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #wstls=$(systemctl status ws-stunnel.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #UdpSSH=$(systemctl status udp-custom | grep active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g')
@@ -185,7 +182,6 @@ else
    status_stunnel="${RED}  Not Running ${NC}  ( Error )"
 fi
 # // SSH Websocket Proxy
-ssh_ws=$( systemctl status ws | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $ssh_ws == "running" ]]; then
     status_ws_epro=" ${GREEN}Running ${NC}( No Error )"
 else
@@ -255,7 +251,7 @@ echo -e " XRAY Vless TLS          :$status_tls_vless"
 echo -e " XRAY Vless None TLS     :$status_nontls_vless"
 echo -e " XRAY Trojan             :$status_virus_trojan"
 #echo -e " Trojan GFW               :$status_virus_trojangfw"
-echo -e " Websocket None TLS      :$status_ws_epro"
+echo -e " Websocket Ws-Pro        :$status_ws_epro"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 echo " Sc By Arya Blitar "
