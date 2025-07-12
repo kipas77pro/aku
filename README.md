@@ -45,6 +45,11 @@ wget -O install-ws "raw.githubusercontent.com/kipas77pro/aku/main/websocket_engi
 ````
 wget -O menu "raw.githubusercontent.com/kipas77pro/aku/main/opok/menu.sh" && chmod +x menu
 ````
+
+````
+wget -O menu "raw.githubusercontent.com/kipas77pro/aku/main/backup/menu.sh" && chmod +x menu
+````
+
 ## udp
 ````
 wget -O udepe "raw.githubusercontent.com/kipas77pro/aku/main/udepe" && chmod +x udepe
