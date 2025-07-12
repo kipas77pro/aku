@@ -46,7 +46,7 @@ else
 resst="${red}OFF${NC}"
 fi
 # // SSH Websocket Proxy
-ssh_ws=$(ssh_ws=$(systemctl status ws | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+ssh_ws=$(systemctl status ws | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 if [[ $ssh_ws == "running" ]]; then
     status_ws_epro="${green}ON${NC}"
 else
