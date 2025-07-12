@@ -2,16 +2,38 @@
 
 NC='\033[0;37m' 
 clear
-domain=$(cat /etc/xray/domain)
-user=trialvmess`</dev/urandom tr -dc X-Z0-9 | head -c4`
+function trial-vmess(){
+clear
+cd
+echo -e "\033[0;34m┌─────────────────────────────────────────────────┐${NC}"
+echo -e "\033[0;34m│    \033[0;32m     • Trial Vmess Account •              ${NC}│ $NC"
+echo -e "\033[0;34m└─────────────────────────────────────────────────┘${NC}"
+echo -e ""
+until [[ $timer =~ ^[0-9]+$ ]]; do
+read -p "Expired (Minutes): " timer
+done
+user=Trial-`</dev/urandom tr -dc X-Z0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
-masaaktif=1
+masaaktif=0
+if [ ! -e /etc/vmess ]; then
+mkdir -p /etc/vmess
+fi
+#c=$(echo "${Quota}" | sed 's/[^0-9]*//g')
+#d=$((${c} * 1024 * 1024 * 1024))
+if [[ ${c} != "0" ]]; then
+echo "${d}" >/etc/vmess/${user}
+fi
+echo "${iplim}" > /etc/vmess/${user}IP
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
-sed -i '/#vmess$/a\### '"$user $exp"'\
+sed -i '/#vmess$/a\#vm '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
-exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
-sed -i '/#vmessgrpc$/a\### '"$user $exp"'\
+sed -i '/#vmessgrpc$/a\#vmg '"$user $exp $uuid"'\
 },{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
+cat> /etc/cron.d/trialvmess${user} << EOF
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/$timer * * * * root /usr/bin/trial vmess $user $uuid $exp
+EOF
 asu=`cat<<EOF
       {
       "v": "2",
