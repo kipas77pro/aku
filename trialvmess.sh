@@ -2,12 +2,11 @@
 
 NC='\033[0;37m' 
 clear
-function trial-vmess(){
 clear
 cd
-echo -e "\033[0;34m┌─────────────────────────────────────────────────┐${NC}"
-echo -e "\033[0;34m│    \033[0;32m     • Trial Vmess Account •              ${NC}│ $NC"
-echo -e "\033[0;34m└─────────────────────────────────────────────────┘${NC}"
+echo -e "\033[0;34m┌──────────────────────────────────────────────┐${NC}"
+echo -e "\033[0;34m│    \033[0;32m     • Trial Vmess Account •              \033[0;34m│ $NC"
+echo -e "\033[0;34m└──────────────────────────────────────────────┘${NC}"
 echo -e ""
 until [[ $timer =~ ^[0-9]+$ ]]; do
 read -p "Expired (Minutes): " timer
@@ -93,7 +92,7 @@ clear
 echo -e "\033[0;34m═════════════\033[0;33mXRAY/VMESS\033[0;34m═════════════\033[0m"
 echo -e "\033[0;34m════════════════════════════════════\033[0m"
 echo -e "Remarks       : ${user}"
-echo -e "Expired On    : $exp" 
+echo -e "Expired On    : $timer Minutes" 
 echo -e "Domain        : ${domain}" 
 echo -e "Port none TLS : 80, 8080, 8880, 2082, 2086, 2052, 2095"
 echo -e "Port TLS      : 443, 8443, 2087, 2096, 2053, 2083 "
@@ -111,7 +110,7 @@ echo -e "Link none TLS  : ${vmesslink2}"
 echo -e "\033[0;34m════════════════════════════════════\033[0m"
 echo -e "Link gRPC      : ${vmesslink3}"
 echo -e "\033[0;34m════════════════════════════════════\033[0m"
-echo -e "Expired On     : $exp"
+echo -e " SELAMAT MENIKMATI TRIAL DARI KAMI"
 echo -e "\033[0;34m════════════════════════════════════\033[0m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
