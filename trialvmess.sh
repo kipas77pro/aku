@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NC='\033[0;37m' 
-clear
+domain=$(cat /etc/xray/domain)
 clear
 cd
 echo -e "\033[0;34m┌──────────────────────────────────────────────┐${NC}"
