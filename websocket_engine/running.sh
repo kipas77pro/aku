@@ -25,30 +25,6 @@ green='\e[1;32m'
 NC='\e[0m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-PERMISSION
-clear
-
-# GETTING OS INFORMATION
-source /etc/os-release
-Versi_OS=$VERSION
-ver=$VERSION_ID
-Tipe=$NAME
-URL_SUPPORT=$HOME_URL
-basedong=$ID
-
-# VPS ISP INFORMATION
-#ITAM='\033[0;30m'
-echo -e "$ITAM"
-REGION=$( curl -s ipinfo.io/region )
-#clear
-#COUNTRY=$( curl -s ipinfo.io/country )
-#clear
-#WAKTU=$( curl -s ipinfo.ip/timezone )
-#clear
-CITY=$( curl -s ipinfo.io/city )
-#clear
-#REGION=$( curl -s ipinfo.io/region )
-#clear
 
 # CHEK STATUS 
 #openvpn_service="$(systemctl show openvpn.service --no-page)"
@@ -203,8 +179,8 @@ fi
 #fi
 
 # TOTAL RAM
-total_ram=` grep "MemTotal: " /proc/meminfo | awk '{ print $2}'`
-totalram=$(($total_ram/1024))
+#total_ram=` grep "MemTotal: " /proc/meminfo | awk '{ print $2}'`
+#totalram=$(($total_ram/1024))
 
 # TIPE PROCESSOR
 #totalcore="$(grep -c "^processor" /proc/cpuinfo)" 
