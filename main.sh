@@ -213,6 +213,7 @@ wget -q -O /usr/bin/jam "https://raw.githubusercontent.com/kipas77pro/aku/main/t
 wget -q -O /usr/bin/babi "https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/babi.sh"
 wget -q -O /usr/bin/update-xray "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/update-xray.sh"
 wget -q -O /usr/bin/set-bw "https://raw.githubusercontent.com/kipas77pro/aku/main/options/set-bw.sh"
+wget -q -O /usr/bin/px "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/px.sh"
 
 chmod +x /usr/bin/jam
 chmod +x /usr/bin/update-xray
@@ -244,6 +245,7 @@ chmod +x /usr/bin/certxray
 chmod +x /usr/bin/menu-set
 chmod +x /usr/bin/info
 chmod +x /usr/bin/set-bw
+chmod +x /usr/bin/px
 
 cat > /etc/cron.d/cl_otm <<-END
 SHELL=/bin/sh
@@ -269,6 +271,11 @@ cat > /etc/cron.d/cl_otm <<-END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 0 3 * * * root /usr/bin/clearlog
+END
+cat > /etc/cron.d/px_otm <<-END
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+0 6 * * * root /usr/bin/px
 END
 cat > /home/re_otm <<-END
 7
@@ -357,7 +364,7 @@ echo  "------------------------------------------------------------"
 echo -e "Wa Me +6281931615811"
 echo  ""
 echo  "" | tee -a log-install.txt
-rm -fr /root/vnstat.sh
+#rm -fr /root/vnstat.sh
 rm -fr /root/ssh-vpn4.sh
 rm -fr /root/ins-xray.sh
 rm -fr /root/setup.sh
