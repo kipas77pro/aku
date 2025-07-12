@@ -58,7 +58,7 @@ resngx="${green}ON${NC}"
 else
 resngx="${red}OFF${NC}"
 fi
-dbr=$(etc/init.d/dropbear status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+dbr=$(/etc/init.d/dropbear status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 if [ "$dbr" = "active" ]; then
 resdbr="${green}ON${NC}"
 else
