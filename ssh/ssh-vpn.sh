@@ -1,8 +1,8 @@
 #!/bin/bash
 # =========================================
 # Quick Setup | Script Setup Manager
-# Edition : Stable Edition V1.0
-# (C) Copyright 2023
+# Edition : Stable Edition
+# (C) Copyright 2025
 # =========================================
 
 clear
@@ -62,9 +62,9 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=Arya
-organizationalunit=AryaStore
-commonname=AryaVpn
+organization=JawaTimur
+organizationalunit=Udanawu
+commonname=AryaBlitar081931615811
 email=setyaaries9@gmail.com
 
 # simple password minimal
