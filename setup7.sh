@@ -270,14 +270,14 @@ wget https://raw.githubusercontent.com/XTLS/Xray-core/main/app/stats/command/com
 cd
 clear
 # Mulai donk
-res0() {
+res1() {
     echo -e "${green}    Install Tools ...${NC}"
     wget https://raw.githubusercontent.com/Arya-Blitar22/header/refs/heads/main/header/tools.sh -O tools.sh >/dev/null 2>&1
     chmod +x tools.sh
     ./tools.sh >/dev/null 2>&1
 }
 
-res1() {
+res2() {
     echo -e "${green}    Install Menu ...${NC}"
     wget https://raw.githubusercontent.com/Arya-Blitar22/bangunan/main/koral/apem.zip
     unzip apem.zip
@@ -287,7 +287,7 @@ res1() {
     rm -rf apem.zip
 }
 
-res2() {
+res3() {
     res1() {
     echo -e "${green}    Install Ssh-Ws...${NC}"
     wget https://raw.githubusercontent.com/Arya-Blitar22/bangunan/refs/heads/main/semen/insshws.sh -O insshws.sh >/dev/null 2>&1
@@ -297,7 +297,7 @@ res2() {
    
 }
 
-res3() {
+res4() {
     echo -e "${green}    Memulai instalasi Ws-Pro${NC}"
     wget https://raw.githubusercontent.com/Arya-Blitar22/luwak/refs/heads/main/kirek/ssh-vpn.sh -O ssh-vpn.sh >/dev/null 2>&1
     chmod +x ssh-vpn.sh
@@ -307,14 +307,14 @@ res3() {
     clear
 }
 
-res4() {
+res5() {
     echo -e "${green}    Install Vray...${NC}" >/dev/null 2>&1
     wget https://raw.githubusercontent.com/Arya-Blitar22/obat/refs/heads/main/panu/ins-xray.sh -O ins-xray.sh >/dev/null 2>&1
     chmod +x ins-xray.sh
     ./ins-xray.sh >/dev/null 2>&1
 }
 
-res5() {
+res6() {
     echo -e "${green}    Install Backup...${NC}" >/dev/null 2>&1
     wget https://raw.githubusercontent.com/Arya-Blitar22/obat/refs/heads/main/sate/set-br.sh -O set-br.sh >/dev/null 2>&1
     chmod +x set-br.sh
@@ -322,7 +322,7 @@ res5() {
     clear
 }
 
-res6() {
+res7() {
     echo -e "${green}    Install UDP ...${NC}" >/dev/null 2>&1
     wget https://raw.githubusercontent.com/Arya-Blitar22/obat/refs/heads/main/asu/udepe -O udepe >/dev/null 2>&1
     chmod +x udepe
@@ -330,7 +330,7 @@ res6() {
     clear
 }
 
-res7() {
+res8() {
     echo -e "${green}    Mengkonfigurasi Dropbear...${NC}"
     sudo sed -i '/^DROPBEAR_PORT=/d' /etc/default/dropbear
     sudo sed -i '/^DROPBEAR_EXTRA_ARGS=/d' /etc/default/dropbear
@@ -358,6 +358,7 @@ function Aryapro(){
     res5
     res6
     res7
+    res8
 }
 Aryapro
 
