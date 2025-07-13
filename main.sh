@@ -364,10 +364,11 @@ echo  "------------------------------------------------------------"
 echo -e "Wa Me +6281931615811"
 echo  ""
 echo  "" | tee -a log-install.txt
-#rm -fr /root/vnstat.sh
+rm -fr /root/tools.sh
+rm -fr /root/install-ws.sh
 rm -fr /root/ssh-vpn4.sh
 rm -fr /root/ins-xray.sh
-rm -fr /root/setup.sh
+rm -fr /root/main.sh
 rm -fr /root/set-br.sh
 rm -fr /root/domain
 history -c
