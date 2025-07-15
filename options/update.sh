@@ -96,19 +96,4 @@ echo ""
 echo -e "\e[0;32mSucces Update Script For New Version\e[0m"
 cd
 rm -f update.sh
-clear
-echo ""
-echo -e "\033[0;34m----------------------------------------\033[0m"
-echo -e "\E[42;1;37m        SCRIPT UDAH UPDATED             \E[0m"
-echo -e "\033[0;34m----------------------------------------\033[0m"
-echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
-;;
-x)
-clear
-echo -e ""
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
-;;
-esac
+
