@@ -55,7 +55,7 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo ""
 echo "  Ok ! Wait Tunggu Sebentar Sayank...."
 sleep 1
-certxray
+cf
 echo ""
 read -n 1 -s -r -p "Tekan Enter Balik menu"
 menu
