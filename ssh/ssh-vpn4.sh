@@ -332,14 +332,16 @@ echo -e "[ ${green}INFO$NC ] Install successfully..."
 
 # install squid
 cd
-apt -y install squid3
-wget -O /etc/squid/squid.conf "raw.githubusercontent.com/kipas77pro/aku/main/ssh/squid3.conf"
-sed -i $MYIP2 /etc/squid/squid.conf
-
+#apt -y install squid3
+#wget -O /etc/squid/squid.conf "raw.githubusercontent.com/kipas77pro/aku/main/ssh/squid3.conf"
+#sed -i $MYIP2 /etc/squid/squid.conf
 
 # install fail2ban
-# Instal DDOS Flate
 apt -y install fail2ban
+sudo systemctl enable --now fail2ban
+/etc/init.d/fail2ban restart
+/etc/init.d/fail2ban status
+# Instal DDOS Flate
 rm -fr /usr/local/ddos
 mkdir -p /usr/local/ddos >/dev/null 2>&1
 #clear
