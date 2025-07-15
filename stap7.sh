@@ -265,35 +265,31 @@ sleep 1
 wget -q https://raw.githubusercontent.com/Arya-Blitar22/header/main/anjing/tools.sh && chmod +x tools.sh && ./tools.sh
 wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/options/update.sh && chmod +x update.sh && ./update.sh
 echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[42;1;37m            >>> Install Ws-Pro <<<         \E[0m$NC"
+echo -e " \E[42;1;37m            >>> Install  WSOKET <<<         \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
-sleep 1
 wget -q https://raw.githubusercontent.com/Arya-Blitar22/bangunan/main/semen/install-ws.sh && chmod +x install-ws.sh && ./install-ws.sh
 sleep 1
+cho -e "┌─────────────────────────────────────────┐"
+echo -e " \E[42;1;37m            >>> Install  SSH-VPN <<<         \E[0m$NC"
+echo -e "└─────────────────────────────────────────┘"
 wget -q https://raw.githubusercontent.com/Arya-Blitar22/luwak/main/kirek/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 sudo systemctl enable --now chrony.service >/dev/null 2>&1
 sudo systemctl restart chrony.service >/dev/null 2>&1
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[42;1;37m           >>> Install XRAY <<<           \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
-sleep 1
 wget -q https://raw.githubusercontent.com/Arya-Blitar22/obat/main/panu/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-sleep 1
-echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[42;1;37m           >>> Install SSH-VPN <<<           \E[0m$NC"
-echo -e "└─────────────────────────────────────────┘"
-sleep 1
-wget -q https://raw.githubusercontent.com/Arya-Blitar22/obat/main/sate/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 sleep 1
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[42;1;37m           >>> Install UDP <<<           \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1
+wget -q https://raw.githubusercontent.com/Arya-Blitar22/obat/main/asu/udepe && chmod +x udepe && ./udepe
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[42;1;37m           >>> Install Backup <<<           \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1
-wget -q https://raw.githubusercontent.com/Arya-Blitar22/obat/main/asu/udepe && chmod +x udepe && ./udepe
+wget -q https://raw.githubusercontent.com/Arya-Blitar22/obat/main/sate/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 sleep 1
 echo -e "${green} Mengkonfigurasi Dropbear...${NC}"
 sleep 2
