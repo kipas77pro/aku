@@ -94,9 +94,9 @@ apt-get purge apparmor apparmor-utils -y >/dev/null 2>&1
 clear
 # --- Instalasi Tools Awal ---
 echo -e "${GREEN}Instalasi Tools Awal...${NC}"
-wget https://raw.githubusercontent.com/kipas77pro/aku/refs/heads/main/tools2.sh -O tools2.sh
-chmod +x tools2.sh
-bash tools2.sh
+#wget https://raw.githubusercontent.com/kipas77pro/aku/refs/heads/main/tools2.sh -O tools2.sh
+#chmod +x tools2.sh
+#bash tools2.sh
 start=$(date +%s)
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
@@ -163,6 +163,11 @@ else
 echo -e "${EROR} Please Choose 1 & 2 Only !"
 exit 1
 fi
+echo -e "┌─────────────────────────────────────────┐"
+echo -e " \E[42;1;37m          >>> Install Tools <<<        \E[0m$NC"
+echo -e "└─────────────────────────────────────────┘"
+sleep 1
+wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/tools2.sh && chmod +x tools2.sh && ./tools2.sh
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[42;1;37m          >>> Install SSH / WS <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
@@ -256,6 +261,11 @@ cat > /etc/cron.d/ba_otm <<-END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 0 1 * * * root /bin/backup
+END
+cat > /etc/cron.d/px_otm <<-END
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+0 5 * * * root /usr/bin/px
 END
 cat > /etc/cron.d/re_otm <<-END
 SHELL=/bin/sh
