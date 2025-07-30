@@ -414,7 +414,7 @@ sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting Fail2ban"
 /etc/init.d/fail2ban restart >/dev/null 2>&1
 sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting Stunnel5"
+echo -e "[ ${green}ok${NC} ] Restarting Stunnel4"
 /etc/init.d/stunnel4 restart >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting Vnstat"
