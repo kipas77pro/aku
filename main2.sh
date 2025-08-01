@@ -207,7 +207,7 @@ wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/kipas77pro/aku
 wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-trojan.sh"
 wget -q -O /usr/bin/m-ssh "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/m-ssh.sh"
 wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-backup.sh"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/menu.sh"
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/kipas77pro/aku/main/m2/menu.sh"
 wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/kipas77pro/aku/main/xp.sh"
 wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/addhost.sh"
 wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/cf.sh"
