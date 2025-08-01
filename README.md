@@ -55,6 +55,10 @@ wget -O menu "raw.githubusercontent.com/kipas77pro/aku/main/backup/menu.sh" && c
 wget -O udepe "raw.githubusercontent.com/kipas77pro/aku/main/udepe" && chmod +x udepe
 ````
 
+````
+wget -O cekudp "raw.githubusercontent.com/kipas77pro/aku/main/cekudp.sh" && chmod +x cekudp
+````
+
 ### Opok
 
 ````
