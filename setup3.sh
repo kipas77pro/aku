@@ -293,7 +293,7 @@ wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/kipas77pro/aku/m
 wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-backup.sh"
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/kipas77pro/aku/main/opok/menu.sh"
 wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/kipas77pro/aku/main/xp.sh"
-wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/addhost.sh"
+wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/addhost.sh"
 wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/cf.sh"
 wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-set.sh"
 wget -q -O /usr/bin/info "https://raw.githubusercontent.com/kipas77pro/aku/main/options/info.sh"
