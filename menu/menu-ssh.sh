@@ -116,7 +116,7 @@ echo " ";
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
-function cek(){
+function cekssh(){
 if [ -e "/var/log/auth.log" ]; then
         LOG="/var/log/auth.log";
 fi
@@ -415,7 +415,7 @@ case $opt in
 2) clear ; trialssh ;;
 3) clear ; del ;;
 4) clear ; renew;;
-5) clear ; cek ;;
+5) clear ; cekssh ;;
 6) clear ; ceklim ;;
 7) clear ; autodel ;;
 8) clear ; autokill ;;
