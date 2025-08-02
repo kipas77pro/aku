@@ -104,7 +104,6 @@ ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 echo -e "${GREEN}Memperbarui sistem dan menginstal dependensi...${NC}"
 apt update -y && apt upgrade -y
 apt install git curl python3 apt  figlet python3-pip apt-transport-https ca-certificates software-properties-common ntpdate wget netcat-openbsd ncurses-bin chrony jq -y
--y
 wget https://github.com/fullstorydev/grpcurl/releases/download/v1.9.1/grpcurl_1.9.1_linux_x86_64.tar.gz -O /tmp/grpcurl.tar.gz && tar -xzf /tmp/grpcurl.tar.gz -C /tmp/ && sudo mv /tmp/grpcurl /usr/local/bin/ && sudo chmod +x /usr/local/bin/grpcurl
 wget https://raw.githubusercontent.com/XTLS/Xray-core/main/app/stats/command/command.proto -O stats.proto
 
@@ -219,6 +218,7 @@ wget -q -O /usr/bin/babi "https://raw.githubusercontent.com/kipas77pro/aku/main/
 wget -q -O /usr/bin/update-xray "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/update-xray.sh"
 wget -q -O /usr/bin/set-bw "https://raw.githubusercontent.com/kipas77pro/aku/main/options/set-bw.sh"
 wget -q -O /usr/bin/px "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/px.sh"
+wget -q -O /usr/bin/cekudp "https://raw.githubusercontent.com/kipas77pro/aku/main/cekudp.sh"
 
 chmod +x /usr/bin/jam
 chmod +x /usr/bin/update-xray
@@ -251,6 +251,7 @@ chmod +x /usr/bin/menu-set
 chmod +x /usr/bin/info
 chmod +x /usr/bin/set-bw
 chmod +x /usr/bin/px
+chmod +x /usr/bin/cekudp
 
 cat > /etc/cron.d/cl_otm <<-END
 SHELL=/bin/sh
