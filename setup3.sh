@@ -301,6 +301,7 @@ wget -q -O /usr/bin/jam "https://raw.githubusercontent.com/kipas77pro/aku/main/t
 wget -q -O /usr/bin/babi "https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/babi.sh"
 wget -q -O /usr/bin/update-xray "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/update-xray.sh"
 wget -q -O /usr/bin/set-bw "https://raw.githubusercontent.com/kipas77pro/aku/main/options/set-bw.sh"
+wget -q -O /usr/bin/cekudp "https://raw.githubusercontent.com/kipas77pro/aku/main/cekudp.sh"
 
 chmod +x /usr/bin/jam
 chmod +x /usr/bin/update-xray
@@ -332,6 +333,7 @@ chmod +x /usr/bin/certxray
 chmod +x /usr/bin/menu-set
 chmod +x /usr/bin/info
 chmod +x /usr/bin/set-bw
+chmod +x /usr/bin/cekudp
 
 cat > /etc/cron.d/cl_otm <<-END
 SHELL=/bin/sh
