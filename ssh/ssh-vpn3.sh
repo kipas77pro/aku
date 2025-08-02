@@ -219,10 +219,10 @@ socket = r:TCP_NODELAY=1
 accept = 447
 connect = 127.0.0.1:109
 [dropbear]
-accept = 445
+accept = 444
 connect = 127.0.0.1:143
 [openssh]
-accept = 444
+accept = 445
 connect = 127.0.0.1:22
 [openssh]
 accept = 777
