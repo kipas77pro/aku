@@ -209,7 +209,7 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
              ssl_certificate_key /etc/xray/xray.key;
              ssl_ciphers EECDH+CHACHA20:EECDH+CHACHA20-draft:EECDH+ECDSA+AES128:EECDH+aRSA+AES128:RSA+AES128:EECDH+ECDSA+AES256:EECDH+aRSA+AES256:RSA+AES256:EECDH+ECDSA+3DES:EECDH+aRSA+3DES:RSA+3DES:!MD5;
              ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3;
-             root /home/vps/public_html;
+             #root /home/vps/public_html;
         }
 EOF
 sed -i '$ ilocation /' /etc/nginx/conf.d/xray.conf
@@ -286,11 +286,6 @@ sed -i '$ igrpc_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;' /etc/ng
 sed -i '$ igrpc_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
 sed -i '$ igrpc_pass grpc://127.0.0.1:'"$trojangrpc"';' /etc/nginx/conf.d/xray.conf
 sed -i '$ i}' /etc/nginx/conf.d/xray.conf
-
-#pw sodosok
-openssl rand -base64 16 > /etc/xray/passwd
-bijikk=$(openssl rand -base64 16 )
-pelerr=$(cat /etc/xray/passwd)
 
 # set uuid xray
 uuid=$(cat /proc/sys/kernel/random/uuid)
@@ -507,9 +502,8 @@ cat <<EOF> /etc/xray/config.json
   }
 }
 EOF
-
-bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.8.19
 # Installing Xray Service
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.8.19
 rm -fr /etc/systemd/system/xray.service.d
 rm -fr /etc/systemd/system/xray.service
 cat <<EOF> /etc/systemd/system/xray.service
