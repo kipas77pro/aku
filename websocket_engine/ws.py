@@ -18,7 +18,7 @@ PASS = ''
 BUFLEN = 4096 * 4
 TIMEOUT = 60
 DEFAULT_HOST = '127.0.0.1:109'
-RESPONSE = (b'HTTP/1.1 101 <font color="green"><b>WA ARYA BLITAR 081931615811<p style="text-align:center"><b> <br><font color='red'><b>क═══════क⊹⊱✫⊰⊹क══════क</b></font> <br><font color='yellow'><b>DigitalOcean, LLC</b></font> <br><font color='green'><b>क═══════क⊹⊱✫⊰⊹क══════क</b><br></font> <br><font color='#DC143C'>&ensp;•NO DDOS!!!</font> <br><font color='#fc7303'>&ensp;•NO HACKING !!!</font> <br><font color='#a9fc03'>&ensp;•NO CARDING !!!</font> <br><font color='#52fc03'>&ensp;•NO TORRENT !!!</font> <br><font color='#9d03fc'>&ensp;•NO SPAMMING !!!</font> <br><font color='#0367fc'>&ensp;•NO PLAYING PLAYSTATION !!!</font> <br><font color='blue'><b>क═══════क⊹⊱✫⊰⊹क══════क</b></font> <br><font color='#F0FFFF'><br>Direct By Akunssh Pusat Blitar<br> </i></b></font>\r\n'
+RESPONSE = (b'HTTP/1.1 101 <font color="green"><b>WA ARYA BLITAR 081931615811 Akunssh Pusat Blitar<br> </i></b></font>\r\n'
             b'Upgrade: websocket\r\n'
             b'Connection: Upgrade\r\n'
             b'Sec-WebSocket-Accept: foo\r\n\r\n')
