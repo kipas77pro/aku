@@ -151,7 +151,7 @@ echo
 read -p " Select menu : " opt
 echo -e ""
 case $opt in
-1) clear ; m-ssh ;;
+1) clear ; menu-ssh ;;
 2) clear ; menu-vmess ;;
 3) clear ; menu-vless ;;
 4) clear ; menu-trojan ;;
