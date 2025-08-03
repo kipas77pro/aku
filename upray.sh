@@ -4,7 +4,7 @@ NC='\033[0;37m'
 green='\033[0;32m' 
 
 clear
-source /var/lib/scrz-prem/ipvps.conf
+#source /var/lib/scrz-prem/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -338,18 +338,6 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmess
-### yaboleh 2025-08-27
-},{"id": "045346f2-c573-4cac-82e5-6c106a6b3e0c","alterId": 0,"email": "yaboleh"
-### syla 2025-08-27
-},{"id": "aecbe204-5999-49c2-b160-29eeef58e61c","alterId": 0,"email": "syla"
-### ravid1o 2025-08-17
-},{"id": "d00b3da8-5dc8-46f3-aeff-1eae0f1ccdae","alterId": 0,"email": "ravid1o"
-### raydua 2025-08-17
-},{"id": "425ea546-12ed-4f6a-aef5-beda05099b60","alterId": 0,"email": "raydua"
-### ray 2025-08-17
-},{"id": "88f14639-9c5d-43ec-a3e0-fe2fc950f7bb","alterId": 0,"email": "ray"
-### sisvdeo 2025-08-13
-},{"id": "73e105d1-01ad-4fb9-9621-bb47fd395ac7","alterId": 0,"email": "sisvdeo"
              }
           ]
        },
@@ -411,18 +399,6 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmessgrpc
-### yaboleh 2025-08-27
-},{"id": "045346f2-c573-4cac-82e5-6c106a6b3e0c","alterId": 0,"email": "yaboleh"
-### syla 2025-08-27
-},{"id": "aecbe204-5999-49c2-b160-29eeef58e61c","alterId": 0,"email": "syla"
-### ravid1o 2025-08-17
-},{"id": "d00b3da8-5dc8-46f3-aeff-1eae0f1ccdae","alterId": 0,"email": "ravid1o"
-### raydua 2025-08-17
-},{"id": "425ea546-12ed-4f6a-aef5-beda05099b60","alterId": 0,"email": "raydua"
-### ray 2025-08-17
-},{"id": "88f14639-9c5d-43ec-a3e0-fe2fc950f7bb","alterId": 0,"email": "ray"
-### sisvdeo 2025-08-13
-},{"id": "73e105d1-01ad-4fb9-9621-bb47fd395ac7","alterId": 0,"email": "sisvdeo"
              }
           ]
        },
@@ -527,7 +503,7 @@ cat <<EOF> /etc/xray/config.json
 }
 EOF
 # Installing Xray Service
-bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.8.19
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.8.23
 rm -fr /etc/systemd/system/xray.service.d
 rm -fr /etc/systemd/system/xray.service
 cat <<EOF> /etc/systemd/system/xray.service
