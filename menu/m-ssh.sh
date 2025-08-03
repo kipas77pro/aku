@@ -46,7 +46,7 @@ fi
 
 read -n 1 -s -r -p "Press any key to back on menu"
 
-m-ssh
+menu-ssh
 }
 function autodel(){
 clear
@@ -90,7 +90,7 @@ clear
                echo -e "$PURPLE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"  
                
                read -n 1 -s -r -p "Press any key to back on menu"
-               m-ssh
+               menu-ssh
         
 }
 function ceklim(){
@@ -143,7 +143,7 @@ echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━�
 echo "Account number: $JUMLAH user"
 echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
-m-ssh
+menu-ssh
 }
 function renew(){
 clear
@@ -206,7 +206,7 @@ echo -e ""
 echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 fi
 read -n 1 -s -r -p "Press any key to back on menu"
-m-ssh
+menu-ssh
 }
 function autokill(){
 clear
