@@ -198,9 +198,10 @@ sudo sed -i "s/eth0/$NET/g" /etc/vnstat.conf && \
 sudo systemctl enable --now vnstat
 
 echo -e "${GREEN}    Mengkonfigurasi Dropbear...${NC}"
+echo -e "${GREEN}    Mengkonfigurasi Dropbear...${NC}"
 sudo sed -i '/^DROPBEAR_PORT=/d' /etc/default/dropbear
 sudo sed -i '/^DROPBEAR_EXTRA_ARGS=/d' /etc/default/dropbear
-echo 'DROPBEAR_PORT=149' | sudo tee -a /etc/default/dropbear
+echo 'DROPBEAR_PORT=143' | sudo tee -a /etc/default/dropbear
 echo 'DROPBEAR_EXTRA_ARGS="-p 50000 -p 109 -p 110 -p 69 -b /etc/issue.net"' | sudo tee -a /etc/default/dropbear
 
 sudo mkdir -p /etc/dropbear/
@@ -414,7 +415,7 @@ sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting Fail2ban"
 /etc/init.d/fail2ban restart >/dev/null 2>&1
 sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting Stunnel4"
+echo -e "[ ${green}ok${NC} ] Restarting Stunnel5"
 /etc/init.d/stunnel4 restart >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting Vnstat"
