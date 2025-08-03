@@ -338,18 +338,18 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmess
-### lombok 2025-08-25
-},{"id": "f6dd5a76-d4fb-42b8-94d8-81689de1996f","alterId": 0,"email": "lombok"
-### ogi 2025-08-21
-},{"id": "7b52943f-1930-456b-928f-000546923280","alterId": 0,"email": "ogi"
-### darso 2025-08-21
-},{"id": "1e655bd5-b9b7-46be-af86-5892ef468a25","alterId": 0,"email": "darso"
-### koma 2025-08-05
-},{"id": "01669174-fbed-4c2b-8ebe-e1aafdf674f6","alterId": 0,"email": "koma"
-### sold1er 2025-08-10
-},{"id": "1851f913-774e-465d-9fa9-7405542be5fb","alterId": 0,"email": "sold1er"
-### bangkalan 2025-08-04
-},{"id": "79c23424-a391-4c99-9ac0-84620ba5c4eb","alterId": 0,"email": "bangkalan"
+### yaboleh 2025-08-27
+},{"id": "045346f2-c573-4cac-82e5-6c106a6b3e0c","alterId": 0,"email": "yaboleh"
+### syla 2025-08-27
+},{"id": "aecbe204-5999-49c2-b160-29eeef58e61c","alterId": 0,"email": "syla"
+### ravid1o 2025-08-17
+},{"id": "d00b3da8-5dc8-46f3-aeff-1eae0f1ccdae","alterId": 0,"email": "ravid1o"
+### raydua 2025-08-17
+},{"id": "425ea546-12ed-4f6a-aef5-beda05099b60","alterId": 0,"email": "raydua"
+### ray 2025-08-17
+},{"id": "88f14639-9c5d-43ec-a3e0-fe2fc950f7bb","alterId": 0,"email": "ray"
+### sisvdeo 2025-08-13
+},{"id": "73e105d1-01ad-4fb9-9621-bb47fd395ac7","alterId": 0,"email": "sisvdeo"
              }
           ]
        },
@@ -411,18 +411,18 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmessgrpc
-### lombok 2025-08-25
-},{"id": "f6dd5a76-d4fb-42b8-94d8-81689de1996f","alterId": 0,"email": "lombok"
-### ogi 2025-08-21
-},{"id": "7b52943f-1930-456b-928f-000546923280","alterId": 0,"email": "ogi"
-### darso 2025-08-21
-},{"id": "1e655bd5-b9b7-46be-af86-5892ef468a25","alterId": 0,"email": "darso"
-### koma 2025-08-05
-},{"id": "01669174-fbed-4c2b-8ebe-e1aafdf674f6","alterId": 0,"email": "koma"
-### sold1er 2025-08-10
-},{"id": "1851f913-774e-465d-9fa9-7405542be5fb","alterId": 0,"email": "sold1er"
-### bangkalan 2025-08-04
-},{"id": "79c23424-a391-4c99-9ac0-84620ba5c4eb","alterId": 0,"email": "bangkalan"
+### yaboleh 2025-08-27
+},{"id": "045346f2-c573-4cac-82e5-6c106a6b3e0c","alterId": 0,"email": "yaboleh"
+### syla 2025-08-27
+},{"id": "aecbe204-5999-49c2-b160-29eeef58e61c","alterId": 0,"email": "syla"
+### ravid1o 2025-08-17
+},{"id": "d00b3da8-5dc8-46f3-aeff-1eae0f1ccdae","alterId": 0,"email": "ravid1o"
+### raydua 2025-08-17
+},{"id": "425ea546-12ed-4f6a-aef5-beda05099b60","alterId": 0,"email": "raydua"
+### ray 2025-08-17
+},{"id": "88f14639-9c5d-43ec-a3e0-fe2fc950f7bb","alterId": 0,"email": "ray"
+### sisvdeo 2025-08-13
+},{"id": "73e105d1-01ad-4fb9-9621-bb47fd395ac7","alterId": 0,"email": "sisvdeo"
              }
           ]
        },
