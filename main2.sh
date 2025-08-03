@@ -219,7 +219,7 @@ wget -q -O /usr/bin/update-xray "https://raw.githubusercontent.com/kipas77pro/ak
 wget -q -O /usr/bin/set-bw "https://raw.githubusercontent.com/kipas77pro/aku/main/options/set-bw.sh"
 wget -q -O /usr/bin/px "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/px.sh"
 wget -q -O /usr/bin/cekssh "https://raw.githubusercontent.com/kipas77pro/aku/main/cekssh.sh"
-wget -q -O /usr/bin/cekudp "https://raw.githubusercontent.com/kipas77pro/aku/main/cekudp"
+wget -q -O /usr/bin/cekudp "https://raw.githubusercontent.com/kipas77pro/aku/main/cekudp.sh"
 
 chmod +x /usr/bin/jam
 chmod +x /usr/bin/update-xray
