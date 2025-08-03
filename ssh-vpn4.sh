@@ -169,6 +169,29 @@ systemctl daemon-reload >/dev/null 2>&1
 systemctl start ssh >/dev/null 2>&1
 systemctl restart ssh >/dev/null 2>&1
 
+echo "=== Install Dropbear ==="
+# install dropbear
+apt -y install dropbear
+sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=149/DROPBEAR_PORT=143/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 50000 -p 109 -p 110 -p 69"/g' /etc/default/dropbear
+echo "/bin/false" >> /etc/shells
+echo "/usr/sbin/nologin" >> /etc/shells
+/etc/init.d/ssh restart >/dev/null 2>&1
+/etc/init.d/dropbear restart >/dev/null 2>&1
+
+sudo mkdir -p /etc/dropbear/
+sudo dropbearkey -t dss -f /etc/dropbear/dropbear_dss_host_key
+sudo dropbearkey -t rsa -f /etc/dropbear/dropbear_rsa_host_key
+sudo chmod 600 /etc/dropbear/dropbear_dss_host_key
+sudo chmod 600 /etc/dropbear/dropbear_rsa_host_key
+sudo chown root:root /etc/dropbear/dropbear_dss_host_key
+sudo chown root:root /etc/dropbear/dropbear_rsa_host_key
+sudo systemctl daemon-reload
+sudo systemctl restart dropbear
+sudo systemctl enable nginx
+clear
+
 # // install squid for debian 9,10 & ubuntu 20.04
 
 # setting vnstat
@@ -185,25 +208,6 @@ sudo apt install -y vnstat && \
 sudo vnstat --addinterface $NET && \
 sudo sed -i "s/eth0/$NET/g" /etc/vnstat.conf && \
 sudo systemctl enable --now vnstat
-
-echo -e "${GREEN}    Mengkonfigurasi Dropbear...${NC}"
-echo -e "${GREEN}    Mengkonfigurasi Dropbear...${NC}"
-sudo sed -i '/^DROPBEAR_PORT=/d' /etc/default/dropbear
-sudo sed -i '/^DROPBEAR_EXTRA_ARGS=/d' /etc/default/dropbear
-echo 'DROPBEAR_PORT=149' | sudo tee -a /etc/default/dropbear
-echo 'DROPBEAR_EXTRA_ARGS="-p 50000 -p 109 -p 110 -p 69 -b /etc/issue.net"' | sudo tee -a /etc/default/dropbear
-
-sudo mkdir -p /etc/dropbear/
-sudo dropbearkey -t dss -f /etc/dropbear/dropbear_dss_host_key
-sudo dropbearkey -t rsa -f /etc/dropbear/dropbear_rsa_host_key
-sudo chmod 600 /etc/dropbear/dropbear_dss_host_key
-sudo chmod 600 /etc/dropbear/dropbear_rsa_host_key
-sudo chown root:root /etc/dropbear/dropbear_dss_host_key
-sudo chown root:root /etc/dropbear/dropbear_rsa_host_key
-sudo systemctl daemon-reload
-sudo systemctl restart dropbear
-sudo systemctl enable nginx
-clear
 
 # remove unnecessary files
 apt autoclean -y >/dev/null 2>&1
