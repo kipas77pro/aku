@@ -198,10 +198,10 @@ sudo sed -i "s/eth0/$NET/g" /etc/vnstat.conf && \
 sudo systemctl enable --now vnstat
 
 echo -e "${GREEN}    Mengkonfigurasi Dropbear...${NC}"
-sudo sed -i '/^DROPBEAR_PORT=/d' /etc/default/dropbear
-sudo sed -i '/^DROPBEAR_EXTRA_ARGS=/d' /etc/default/dropbear
-echo 'DROPBEAR_PORT=109' | sudo tee -a /etc/default/dropbear
-echo 'DROPBEAR_EXTRA_ARGS="-p 50000 -p 109 -p 110 -p 69 -b /etc/issue.net"' | sudo tee -a /etc/default/dropbear
+echo -e "[ ${green}INFO$NC ] Settings Dropbear"
+sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/dropbear
 
 sudo mkdir -p /etc/dropbear/
 sudo dropbearkey -t dss -f /etc/dropbear/dropbear_dss_host_key
