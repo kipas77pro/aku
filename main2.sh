@@ -205,7 +205,7 @@ wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/kipas77pro/
 wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-vless.sh"
 wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-vmess.sh"
 wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-trojan.sh"
-wget -q -O /usr/bin/m-ssh "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/m-ssh.sh"
+wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/menu-ssh.sh"
 wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-backup.sh"
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/kipas77pro/aku/main/m2/menu.sh"
 wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/kipas77pro/aku/main/xp.sh"
@@ -242,7 +242,7 @@ chmod +x /usr/bin/cek-bandwidth
 chmod +x /usr/bin/menu-vless
 chmod +x /usr/bin/menu-vmess
 chmod +x /usr/bin/menu-trojan
-chmod +x /usr/bin/m-ssh
+chmod +x /usr/bin/menu-ssh
 chmod +x /usr/bin/menu-backup
 chmod +x /usr/bin/menu
 chmod +x /usr/bin/xp
