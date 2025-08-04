@@ -157,6 +157,12 @@ if [[ $wsdrop == "running" ]]; then
 else
    swsdrop="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
+# // SSH Websocket Proxy
+if [[ $ssh_ws == "running" ]]; then
+    status_ws_epro=" ${GREEN}Running ${NC}( No Error )"
+else
+    status_ws_epro="${RED}  Not Running ${NC}  ( Error )"
+fi
 
 # STATUS SERVICE  SSH UDP 
 #if [[ $UdpSSH == "running" ]]; then 
