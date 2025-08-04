@@ -171,7 +171,7 @@ echo -e "┌──────────────────────�
 echo -e " \E[42;1;37m          >>> Install SSH / WS <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1
-wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/ssh-vpn4.sh && chmod +x ssh-vpn4.sh && ./ssh-vpn4.sh
+wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/ssh-vpn5.sh && chmod +x ssh-vpn5.sh && ./ssh-vpn5.sh
 wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/install-ws.sh && chmod +x install-ws.sh && ./install-ws.sh
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[42;1;37m            >>> Install Xray <<<         \E[0m$NC"
@@ -196,10 +196,10 @@ wget -q -O /usr/bin/trialvless "https://raw.githubusercontent.com/kipas77pro/aku
 wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/kipas77pro/aku/main/add-tr.sh"
 wget -q -O /usr/bin/trialtrojan "https://raw.githubusercontent.com/kipas77pro/aku/main/trialtrojan.sh"
 wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/kipas77pro/aku/main/options/autoreboot.sh"
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/restart.sh"
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/kipas77pro/aku/main/m2/restart.sh"
 wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/kipas77pro/aku/main/options/tendang.sh"
 wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/kipas77pro/aku/main/options/clearlog.sh"
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/running.sh"
+wget -q -O /usr/bin/running "https://raw.githubusercontent.com/kipas77pro/aku/main/m2/running.sh"
 wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/speedtest_cli.py"
 wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/kipas77pro/aku/main/options/cek-bandwidth.sh"
 wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-vless.sh"
@@ -209,10 +209,10 @@ wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/kipas77pro/aku/m
 wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-backup.sh"
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/kipas77pro/aku/main/m2/menu.sh"
 wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/kipas77pro/aku/main/xp.sh"
-wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/addhost.sh"
+wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/kipas77pro/aku/main/m2/addhost.sh"
 wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/cf.sh"
 wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-set.sh"
-wget -q -O /usr/bin/info "https://raw.githubusercontent.com/kipas77pro/aku/main/options/info.sh"
+wget -q -O /usr/bin/info "https://raw.githubusercontent.com/kipas77pro/aku/main/m2/info.sh"
 wget -q -O /usr/bin/jam "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/jam.sh"
 wget -q -O /usr/bin/babi "https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/babi.sh"
 wget -q -O /usr/bin/update-xray "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/update-xray.sh"
@@ -379,7 +379,7 @@ echo  ""
 echo  "" | tee -a log-install.txt
 rm -fr /root/tools.sh
 rm -fr /root/install-ws.sh
-rm -fr /root/ssh-vpn4.sh
+rm -fr /root/ssh-vpn5.sh
 rm -fr /root/ins-xray.sh
 rm -fr /root/main2.sh
 rm -fr /root/set-br.sh
