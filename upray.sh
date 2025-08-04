@@ -338,6 +338,24 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmess
+### enjoy 2025-08-28
+},{"id": "da96e152-afbc-4745-81a3-c48f221de419","alterId": 0,"email": "enjoy"
+### tem4n 2025-08-25
+},{"id": "512e4dff-e1b2-45cc-b5f4-f4fb4ab3a273","alterId": 0,"email": "tem4n"
+### pamrkasan 2025-08-21
+},{"id": "96686fb3-c546-4599-a591-eeeabe464922","alterId": 0,"email": "pamrkasan"
+### ajis19 2025-08-08
+},{"id": "3502326a-1924-47ed-9745-6e393ffea99e","alterId": 0,"email": "ajis19"
+### lana30 2025-08-20
+},{"id": "62d512d5-b44e-4d53-b3f7-69448b08f75c","alterId": 0,"email": "lana30"
+### vdeoo 2025-08-18
+},{"id": "d1064366-31ea-4c42-91ec-1926b136c484","alterId": 0,"email": "vdeoo"
+### hamed30 2025-08-10
+},{"id": "83744c8d-11ce-4b5d-ad28-6bd4e98302c7","alterId": 0,"email": "hamed30"
+### hcdark 2025-08-10
+},{"id": "6f56a2dd-8cdf-4bad-bb09-678837de0b49","alterId": 0,"email": "hcdark"
+### cina 2025-08-26
+},{"id": "2861a997-b7c6-4573-99be-9a4f2d5f774b","alterId": 0,"email": "cina"
              }
           ]
        },
@@ -358,6 +376,8 @@ cat <<EOF> /etc/xray/config.json
               {
                  "password": "${uuid}"
 #trojanws
+### leo 2025-08-31
+},{"password": "216b88ba-7cc0-4efb-a1d6-897e4c7f9512","email": "leo"
               }
           ],
          "udp": true
@@ -399,6 +419,24 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmessgrpc
+### enjoy 2025-08-28
+},{"id": "da96e152-afbc-4745-81a3-c48f221de419","alterId": 0,"email": "enjoy"
+### tem4n 2025-08-25
+},{"id": "512e4dff-e1b2-45cc-b5f4-f4fb4ab3a273","alterId": 0,"email": "tem4n"
+### pamrkasan 2025-08-21
+},{"id": "96686fb3-c546-4599-a591-eeeabe464922","alterId": 0,"email": "pamrkasan"
+### ajis19 2025-08-08
+},{"id": "3502326a-1924-47ed-9745-6e393ffea99e","alterId": 0,"email": "ajis19"
+### lana30 2025-08-20
+},{"id": "62d512d5-b44e-4d53-b3f7-69448b08f75c","alterId": 0,"email": "lana30"
+### vdeoo 2025-08-18
+},{"id": "d1064366-31ea-4c42-91ec-1926b136c484","alterId": 0,"email": "vdeoo"
+### hamed30 2025-08-10
+},{"id": "83744c8d-11ce-4b5d-ad28-6bd4e98302c7","alterId": 0,"email": "hamed30"
+### hcdark 2025-08-10
+},{"id": "6f56a2dd-8cdf-4bad-bb09-678837de0b49","alterId": 0,"email": "hcdark"
+### cina 2025-08-26
+},{"id": "2861a997-b7c6-4573-99be-9a4f2d5f774b","alterId": 0,"email": "cina"
              }
           ]
        },
@@ -419,6 +457,8 @@ cat <<EOF> /etc/xray/config.json
                {
                  "password": "${uuid}"
 #trojangrpc
+### leo 2025-08-31
+},{"password": "216b88ba-7cc0-4efb-a1d6-897e4c7f9512","email": "leo"
                }
            ]
         },
