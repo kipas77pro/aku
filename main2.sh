@@ -212,7 +212,7 @@ wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/kipas77pro/aku/main/xp
 wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/kipas77pro/aku/main/m2/addhost.sh"
 wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/cf.sh"
 wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-set.sh"
-wget -q -O /usr/bin/info "https://raw.githubusercontent.com/kipas77pro/aku/main/m2/info.sh"
+wget -q -O /usr/bin/info "https://raw.githubusercontent.com/kipas77pro/aku/main/options/info.sh"
 wget -q -O /usr/bin/jam "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/jam.sh"
 wget -q -O /usr/bin/babi "https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/babi.sh"
 wget -q -O /usr/bin/update-xray "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/update-xray.sh"
