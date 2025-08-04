@@ -171,7 +171,7 @@ echo -e "┌──────────────────────�
 echo -e " \E[42;1;37m          >>> Install SSH / WS <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1
-wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/ssh-vpn5.sh && chmod +x ssh-vpn5.sh && ./ssh-vpn5.sh
+wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/ssh/ssh-vpn4.sh && chmod +x ssh-vpn4.sh && ./ssh-vpn4.sh
 wget -q https://raw.githubusercontent.com/kipas77pro/aku/main/m2/install-ws.sh && chmod +x install-ws.sh && ./install-ws.sh
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[42;1;37m            >>> Install Xray <<<         \E[0m$NC"
@@ -199,7 +199,7 @@ wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/kipas77pro/aku
 wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/kipas77pro/aku/main/m2/restart.sh"
 wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/kipas77pro/aku/main/options/tendang.sh"
 wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/kipas77pro/aku/main/options/clearlog.sh"
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/kipas77pro/aku/main/m2/running.sh"
+wget -q -O /usr/bin/running "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/running.sh"
 wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/kipas77pro/aku/main/tools/speedtest_cli.py"
 wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/kipas77pro/aku/main/options/cek-bandwidth.sh"
 wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/kipas77pro/aku/main/menu/menu-vless.sh"
@@ -379,7 +379,7 @@ echo  ""
 echo  "" | tee -a log-install.txt
 rm -fr /root/tools2.sh
 rm -fr /root/install-ws.sh
-rm -fr /root/ssh-vpn5.sh
+rm -fr /root/ssh-vpn4.sh
 rm -fr /root/ins-xray.sh
 rm -fr /root/main2.sh
 rm -fr /root/set-br.sh
