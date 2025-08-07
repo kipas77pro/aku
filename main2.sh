@@ -196,7 +196,7 @@ wget -q -O /usr/bin/trialvless "https://raw.githubusercontent.com/kipas77pro/aku
 wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/kipas77pro/aku/main/add-tr.sh"
 wget -q -O /usr/bin/trialtrojan "https://raw.githubusercontent.com/kipas77pro/aku/main/trialtrojan.sh"
 wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/kipas77pro/aku/main/options/autoreboot.sh"
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/kipas77pro/aku/main/m2/restart.sh"
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/restart.sh"
 wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/kipas77pro/aku/main/options/tendang.sh"
 wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/kipas77pro/aku/main/options/clearlog.sh"
 wget -q -O /usr/bin/running "https://raw.githubusercontent.com/kipas77pro/aku/main/websocket_engine/running.sh"
