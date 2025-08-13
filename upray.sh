@@ -338,6 +338,20 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmess
+### sold1er 2025-09-09
+},{"id": "5084cd20-4d82-4c54-b766-60007e280758","alterId": 0,"email": "sold1er"
+### niz30 2025-09-08
+},{"id": "865bbf9a-f731-4d19-8b3b-06d635fecbb9","alterId": 0,"email": "niz30"
+### pore 2025-09-05
+},{"id": "30dc9a3e-1b4a-49d7-b000-f74d9e2b2665","alterId": 0,"email": "pore"
+### jost 2025-09-05
+},{"id": "7e9d80ff-87c4-4d09-a789-d8c668f394df","alterId": 0,"email": "jost"
+### lombok 2025-08-25
+},{"id": "f6dd5a76-d4fb-42b8-94d8-81689de1996f","alterId": 0,"email": "lombok"
+### ogi 2025-08-21
+},{"id": "7b52943f-1930-456b-928f-000546923280","alterId": 0,"email": "ogi"
+### darso 2025-08-21
+},{"id": "1e655bd5-b9b7-46be-af86-5892ef468a25","alterId": 0,"email": "darso"
              }
           ]
        },
@@ -399,6 +413,20 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmessgrpc
+### sold1er 2025-09-09
+},{"id": "5084cd20-4d82-4c54-b766-60007e280758","alterId": 0,"email": "sold1er"
+### niz30 2025-09-08
+},{"id": "865bbf9a-f731-4d19-8b3b-06d635fecbb9","alterId": 0,"email": "niz30"
+### pore 2025-09-05
+},{"id": "30dc9a3e-1b4a-49d7-b000-f74d9e2b2665","alterId": 0,"email": "pore"
+### jost 2025-09-05
+},{"id": "7e9d80ff-87c4-4d09-a789-d8c668f394df","alterId": 0,"email": "jost"
+### lombok 2025-08-25
+},{"id": "f6dd5a76-d4fb-42b8-94d8-81689de1996f","alterId": 0,"email": "lombok"
+### ogi 2025-08-21
+},{"id": "7b52943f-1930-456b-928f-000546923280","alterId": 0,"email": "ogi"
+### darso 2025-08-21
+},{"id": "1e655bd5-b9b7-46be-af86-5892ef468a25","alterId": 0,"email": "darso"
              }
           ]
        },
