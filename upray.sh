@@ -318,8 +318,6 @@ cat <<EOF> /etc/xray/config.json
                {
                  "id": "${uuid}"                 
 #vless
-### erol 2025-09-09
-},{"id": "ac23d8ff-53df-4098-bacc-ddd2ed5d7dd4","email": "erol"
              }
           ]
        },
@@ -340,18 +338,6 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmess
-### kapad 2025-08-21
-},{"id": "1e6eb474-7021-433f-93f7-18e7fca62dbe","alterId": 0,"email": "kapad"
-### xlxl 2025-09-04
-},{"id": "b84b5ad4-c4de-473b-b884-1d922ffd1955","alterId": 0,"email": "xlxl"
-### wa 2025-08-28
-},{"id": "d932a1cf-5723-4114-9209-f6bcd1d64646","alterId": 0,"email": "wa"
-### pra4 2025-08-29
-},{"id": "9acc05cd-8b34-42d9-b185-27cdb99ec0af","alterId": 0,"email": "pra4"
-### nindaceel 2025-08-27
-},{"id": "73858624-190b-48a7-b777-3e1fa5688ccc","alterId": 0,"email": "nindaceel"
-### tasik 2025-08-25
-},{"id": "31813e22-ea1a-4900-bcce-6f0044ef44e4","alterId": 0,"email": "tasik"
              }
           ]
        },
@@ -393,8 +379,6 @@ cat <<EOF> /etc/xray/config.json
              {
                "id": "${uuid}"
 #vlessgrpc
-### erol 2025-09-09
-},{"id": "ac23d8ff-53df-4098-bacc-ddd2ed5d7dd4","email": "erol"
              }
           ]
        },
@@ -415,18 +399,6 @@ cat <<EOF> /etc/xray/config.json
                  "id": "${uuid}",
                  "alterId": 0
 #vmessgrpc
-### kapad 2025-08-21
-},{"id": "1e6eb474-7021-433f-93f7-18e7fca62dbe","alterId": 0,"email": "kapad"
-### xlxl 2025-09-04
-},{"id": "b84b5ad4-c4de-473b-b884-1d922ffd1955","alterId": 0,"email": "xlxl"
-### wa 2025-08-28
-},{"id": "d932a1cf-5723-4114-9209-f6bcd1d64646","alterId": 0,"email": "wa"
-### pra4 2025-08-29
-},{"id": "9acc05cd-8b34-42d9-b185-27cdb99ec0af","alterId": 0,"email": "pra4"
-### nindaceel 2025-08-27
-},{"id": "73858624-190b-48a7-b777-3e1fa5688ccc","alterId": 0,"email": "nindaceel"
-### tasik 2025-08-25
-},{"id": "31813e22-ea1a-4900-bcce-6f0044ef44e4","alterId": 0,"email": "tasik"
              }
           ]
        },
