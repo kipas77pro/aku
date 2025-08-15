@@ -18,7 +18,7 @@ PASS = ''
 BUFLEN = 4096 * 4
 TIMEOUT = 60
 DEFAULT_HOST = '127.0.0.1:109'
-RESPONSE = (b'HTTP/1.1 101 <font color="green"><b>PREMIUM X-STOREVPN</b></font>\r\n'
+RESPONSE = (b'HTTP/1.1 101 <font color="green"><b>Direct Premium By Yusuf</b></font>\r\n'
             b'Upgrade: websocket\r\n'
             b'Connection: Upgrade\r\n'
             b'Sec-WebSocket-Accept: foo\r\n\r\n')
